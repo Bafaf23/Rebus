@@ -1,0 +1,309 @@
+:root{
+    --color: #0c08a8;
+    --titel: #ffee00;
+    --fondor: #f7f7f7;
+    --fondoc: #ffffff;
+    --txt: #0c13d6;
+    --txtc: #353434;
+    --txtsub: #5a5656;
+    --menum: #1a71f3;
+    --btn: rgb(0, 174, 255);
+    --fondocc: rgba(144, 155, 236, 0.767);
+}
+
+.nav_link{
+    position: relative;
+    padding: 6px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: color 320ms;
+}
+
+.nav_link::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    border-bottom: 200px solid var(--hoverb);
+    border-right: 200px solid transparent;
+    border-radius: inherit;
+    transform: translateX(-110%);
+    transition: 0.6s ease;
+    z-index: -1;
+}
+
+
+.nav_link:hover,
+.nav_link:focus-visible{
+    color: var(--hoverb);
+}
+
+.nav_link:hover::before,
+.nav_link:focus-visible::before{
+    transform: translateY(0);
+}
+
+.contenll #ingreso:checked + .nav_link{
+    color: var(--hoverb);
+}
+
+.contenll #ingreso:checked + .nav_link::before{
+    transform: translateY(0);
+}
+
+
+#btn-modal-i{
+    display: none;
+}
+
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0 ; left: 0;
+    background: var(--fondocc);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+#btn-modal-i:checked ~ .container-modal{
+    display: flex;
+}
+
+.content-modal{
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    background: var(--fondoc);
+    transition: all 1s;
+}
+
+.tiel-modal{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--txt);
+}
+
+.p-modal{
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: justify;
+    color: var(--txtsub);
+}
+
+.inpu-mudal{
+    display: grid;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.inpu-mudal input{
+    font-size: 17px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #5a5656;
+    border-radius: 5px;
+    outline: none;
+}
+
+select{
+    font-size: 17px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #5a5656;
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputmm{
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid ;
+    border-radius: 5px;
+}
+
+.bolivares .plusmm .pais{
+    background-image: url(https://mippci.gob.ve/wp-content/uploads/2025/07/2.png);
+    background-position-x: center;
+    background-position-y: -147px;
+    background-size: cover;
+    align-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.cambio .plusmm .pais{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_the_United_States_%281846%E2%80%931847%29.svg/250px-Flag_of_the_United_States_%281846%E2%80%931847%29.svg.png);
+    background-position: center;
+    border-radius: 999px;
+    background-size: cover;
+    align-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.bolivares{
+    display: flex;
+    gap: 5px;
+}
+
+.dolares{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5a5656;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+
+.btns{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btns label{
+    font-size:larger;
+    color: red;
+    margin-right: 15px;
+    border: 1px solid red;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btns label:hover{
+    transition: 0.5s ease;
+    background: red;
+    color: #f7f7f7;
+}
+
+
+.btns button{
+    font-size:larger;
+    border: none;
+    padding: 15px;
+    color: #ffff;
+    background: var(--btn);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btns button:hover{
+    background: transparent;
+    color: var(--btn);
+    border: 1px solid var(--btn);
+}
+
+.menua{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    background-color: var(--menum);
+}
+
+.btn{
+    width: 5rem;
+    justify-items: center;
+    text-align: center;
+    text-transform:uppercase;
+    cursor: pointer;
+    color: white;
+}
+
+.iconm{
+    width: 50px;
+    height: 50px;
+    align-content: center;
+    background-color: var(--btn);
+    border-radius: 999px;
+    margin-bottom: 5px;
+}
+
+.iconm:hover{
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+}
+
+.conten-historial{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.historial{
+    width: 100%;
+    min-height: 8rem;
+    padding: 10px;
+    background-color: var(--fondor);
+}
+
+.col10{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+
+.tiel{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 28px;
+}
+
+.transacion{
+    min-height: 8.5rem;
+    padding: 15px;
+    background-color: var(--fondoc);
+    box-shadow: -0px 0px 2px var(--txtc);
+    transition: all 1ms;
+}
+
+.t-fecha-i{
+    font-size: 18px;
+    font-style: oblique;
+    color: var(--txt);
+}
+
+.t-tiel-i{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.t-monto-i{
+    height: 100%;
+    font-size: 30px;
+}
+
+.tbtn{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.tbtn a{
+    padding: 10px;
+    background: var(--btn);
+    border-radius: 5px;
+    color: #f7f7f7;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.tbtn-eliminar a:hover{
+    background-color: red;
+}
+
+.tbtn-editar a:hover{
+    background-color: rgb(3, 148, 148);
+}
