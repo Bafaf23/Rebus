@@ -213,7 +213,7 @@ a{
 }
 
 .utima{
-    color: #dad8d8;
+    color: #eeecec98;
 }
 
 .conten{
@@ -224,22 +224,15 @@ a{
     padding: 10px;
 }
 
-.contercardr{
-    display: flex;
-    justify-content:center;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-}
-
 .conten-card{
-    display: flex;
-    justify-content:space-around;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 24px;
 }
 
 .card{
-    width: 30rem;
+    width: 100%;
     height: 100%;
     padding: 15px;
     background: var(--fondoc);
@@ -254,9 +247,7 @@ a{
 
 .card-info{
     padding: 10px;
-    height: 100%;
     justify-items: center;
-    align-content: center;
 }
 
 .bolibares{
