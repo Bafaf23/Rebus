@@ -1,9 +1,9 @@
 :root{
-    --color: #0c08a8;
+    --color: #07046b;
     --titel: #ffee00;
     --fondor: #f7f7f7;
     --fondoc: #ffffff;
-    --txt: #0c13d6;
+    --txt: #0cccda;
     --txtdos: #ffffff;
     --txtc: #353434;
    --txtsub: #5a5656;
@@ -125,7 +125,7 @@ header{
 .logo{
     width: 300px;
     height: 120px;
-    background-image: url(../media/RBO.png);
+    background-image: url(../media/RBO-removebg-preview.png);
     background-position: center;
     background-size: cover;
     overflow: hidden;
