@@ -1,9 +1,9 @@
 :root{
-    --color: #0c08a8;
+    --color: #07046b;
     --titel: #ffee00;
     --fondor: #f7f7f7;
     --fondoc: #ffffff;
-    --txt: #0c13d6;
+    --txt: #0cccda;
     --txtc: #353434;
     --txtsub: #5a5656;
     --menum: #1a71f3;
@@ -163,6 +163,10 @@ select{
     gap: 10px;
 }
 
+.contencard{
+    width: 35rem;
+    justify-self: center;
+}
 
 .btns{
     display: flex;
@@ -228,8 +232,8 @@ select{
     margin-bottom: 5px;
 }
 
-.iconm:hover{
-    transform: translateY(-3px);
+.btn:hover{
+    transform: translateY(-5px);
     transition: 0.2s ease;
 }
 
