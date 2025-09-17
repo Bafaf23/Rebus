@@ -76,22 +76,48 @@
 .content-modal{
     width: 100%;
     max-width: 700px;
-    padding: 30px;
     background: var(--fondoc);
-    transition: all 1s;
+    box-shadow: 0px 0px 7px var(--txtc);
+}
+
+.forr{
+    position: relative;
+    padding: 30px;
+    background: var(--color);
+    max-width: 100%;
+    z-index: 2;
+}
+
+
+.forr::after{
+    position: absolute;
+    content: " ";
+    width: 20%;
+    height: 70%;
+    left: 477px;
+    bottom: 0px;
+    border-left: 83px solid transparent;
+    border-bottom: 135px solid var(--fondoc);
+    z-index: -1;
+
 }
 
 .tiel-modal{
     text-transform: uppercase;
     font-size: 30px;
-    color: var(--txt);
+    color: var(--fondoc);
 }
 
 .p-modal{
     font-size: 15px;
     margin-top: 5px;
     text-align: justify;
-    color: var(--txtsub);
+    color: var(--txt);
+    width: 70%;
+}
+
+form{
+     padding: 0 30px 30px 30px;
 }
 
 .inpu-mudal{
