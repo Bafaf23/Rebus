@@ -232,7 +232,7 @@ a{
 }
 
 .card{
-    width: 100%;
+    width: 85%;
     height: 100%;
     padding: 15px;
     background: var(--fondoc);
