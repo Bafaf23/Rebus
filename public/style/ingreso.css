@@ -78,6 +78,7 @@
     max-width: 700px;
     background: var(--fondoc);
     box-shadow: 0px 0px 7px var(--txtc);
+    transition: all 1ms;
 }
 
 .forr{
@@ -247,6 +248,7 @@ select{
     text-transform:uppercase;
     cursor: pointer;
     color: white;
+
 }
 
 .iconm{
