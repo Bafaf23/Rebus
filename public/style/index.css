@@ -86,8 +86,8 @@ header{
 .nav_link{
     position: relative;
     padding: 5px;
+    border-radius: 2px;
     overflow: hidden;
-    border-radius: 5px;
     transition: color 320ms;
 }
 
@@ -98,7 +98,7 @@ header{
     inset: 0;
     border-bottom: 200px solid var(--hoverb);
     border-right: 200px solid transparent;
-    border-radius: inherit;
+
     transform: translateX(-110%);
     transition: 0.6s ease;
     z-index: -1;

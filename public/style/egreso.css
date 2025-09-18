@@ -2,7 +2,7 @@
     position: relative;
     padding: 5px;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: color 320ms;
 }
 
