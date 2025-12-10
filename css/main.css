@@ -1,0 +1,168 @@
+/* variablas */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(199, 199, 199);
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: rgb(248, 246, 246);
+}
+
+.titel-card {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.data-cuenta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detalleCuanta {
+  color: gray;
+  font-style: italic;
+}
+
+#saldo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0c079c;
+}
+
+nav {
+  background-color: white;
+  border: 1px solid rgb(221, 218, 218);
+  box-shadow: 1px 1px 4px rgb(95, 95, 95);
+  border-radius: 1rem;
+  font-size: 1.1rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+nav ul li:hover {
+  color: #07d5f0;
+}
+nav ul li span {
+  font-size: 25px;
+  color: #050255;
+}
+nav ul li span:hover {
+  transform: translateY(-5px);
+  transition: all 0.22s;
+  color: rgb(7, 4, 156);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header img {
+  width: 8rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.custom-shape-divider-top-1754052895 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1754052895 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 490px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1754052895 .shape-fill {
+  fill: #050255;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.content-titel-section {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.content-balance {
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.349);
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+}
+
+.wolcome {
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.wolcome .avatar {
+  background-color: rgba(165, 240, 236, 0.8470588235);
+  padding: 5px 10px 5px 10px;
+  border-radius: 50%;
+}
+
+.bar-wolcome {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 25%;
+  justify-self: center;
+}
+
+.resumenes {
+  color: #07d5f0;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.content-resumenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: orange;
+}
+.content-resumenes .conten {
+  background-color: red;
+}/*# sourceMappingURL=main.css.map */

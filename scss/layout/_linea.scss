@@ -1,0 +1,23 @@
+@use "./../utils/variables-color" as u;
+
+.custom-shape-divider-top-1754052895 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1754052895 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 490px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1754052895 .shape-fill {
+  fill: u.$primari-color;
+}

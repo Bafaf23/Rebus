@@ -1,0 +1,19 @@
+@use "./../utils/variables-color" as u;
+
+.resumenes{
+  color:u.$primari-hoverb;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.content-resumenes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: orange;
+
+  .conten{
+    background-color: red;
+  }
+}
+

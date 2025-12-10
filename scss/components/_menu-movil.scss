@@ -1,0 +1,46 @@
+@use "./../utils/variables-color" as u;
+
+nav {
+  background-color: white;
+  border: 1px solid rgb(221, 218, 218);
+  box-shadow: 1px 1px 4px rgb(95, 95, 95);
+  border-radius: 1rem;
+  font-size: 1.1rem;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+
+      &:hover {
+        color: u.$primari-hoverb;
+      }
+      span {
+        font-size: 25px;
+        color: u.$primari-color;
+        &:hover {
+          transform: translateY(-5px);
+          transition: all 0.22s;
+          color: rgb(7, 4, 156);
+        }
+      }
+      
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
