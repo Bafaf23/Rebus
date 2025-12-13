@@ -1,13 +1,14 @@
 /* variablas */
+/* colores principales */
 * {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
+  height: 100dvb;
 }
 
 .card {
@@ -18,40 +19,37 @@ body {
   border-radius: 0.5rem;
   border: 1px solid rgb(199, 199, 199);
 }
-
+.card .titel-card {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.card .data-cuenta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card .data-cuenta .detalleCuanta {
+  color: gray;
+  font-style: italic;
+}
+.card .data-cuenta .content-saldo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.card .data-cuenta .content-saldo #saldo {
+  font-size: 1.6rem;
+  font-style: italic;
+}
 .card:hover {
   cursor: pointer;
   background-color: rgb(248, 246, 246);
 }
 
-.titel-card {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.data-cuenta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.detalleCuanta {
-  color: gray;
-  font-style: italic;
-}
-
-#saldo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #0c079c;
-}
-
+/* variablas */
 nav {
-  background-color: white;
-  border: 1px solid rgb(221, 218, 218);
-  box-shadow: 1px 1px 4px rgb(95, 95, 95);
-  border-radius: 1rem;
-  font-size: 1.1rem;
+  background-color: #15297c;
+  border-radius: 0.5rem;
 }
 nav ul {
   display: flex;
@@ -64,18 +62,12 @@ nav ul li {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
+  color: white;
+  border-radius: 0.5rem;
 }
 nav ul li:hover {
-  color: #07d5f0;
-}
-nav ul li span {
-  font-size: 25px;
-  color: #050255;
-}
-nav ul li span:hover {
-  transform: translateY(-5px);
-  transition: all 0.22s;
-  color: rgb(7, 4, 156);
+  color: #0cbccc;
+  background-color: rgba(192, 188, 188, 0.199);
 }
 
 header {
@@ -88,6 +80,7 @@ header img {
   height: fit-content;
 }
 
+/* variablas */
 .custom-shape-divider-top-1754052895 {
   position: absolute;
   top: 0;
@@ -102,12 +95,12 @@ header img {
   position: relative;
   display: block;
   width: calc(200% + 1.3px);
-  height: 490px;
+  height: 350px;
   transform: rotateY(180deg);
 }
 
 .custom-shape-divider-top-1754052895 .shape-fill {
-  fill: #050255;
+  fill: #142157;
 }
 
 main {
@@ -122,37 +115,42 @@ main {
   font-size: 1.6rem;
 }
 
-.content-balance {
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.349);
-  border: 1px solid rgba(255, 255, 255, 0.37);
-  border-radius: 0.2rem;
-  padding: 0.4rem;
+/* variablas */
+.section-welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-
-.wolcome {
+.section-welcome .wolcome {
   color: white;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.2rem;
 }
-.wolcome .avatar {
-  background-color: rgba(165, 240, 236, 0.8470588235);
-  padding: 5px 10px 5px 10px;
+.section-welcome .wolcome .avatar {
+  cursor: pointer;
+}
+.section-welcome .wolcome .avatar .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(30, 197, 209, 0.6862745098);
+  border-radius: 999px;
+  width: 3rem;
+  height: 3rem;
+  color: #ffffff;
+  font-size: 23px;
+}
+.section-welcome .bar-wolcome {
+  border: 1px solid rgba(212, 212, 212, 0.315);
   border-radius: 50%;
+  width: 30%;
 }
 
-.bar-wolcome {
-  border: 1px solid gray;
-  border-radius: 50%;
-  width: 25%;
-  justify-self: center;
-}
-
+/* variablas */
 .resumenes {
-  color: #07d5f0;
+  color: #142157;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -163,6 +161,6 @@ main {
   gap: 20px;
   background-color: orange;
 }
-.content-resumenes .conten {
+.content-resumenes .content {
   background-color: red;
 }/*# sourceMappingURL=main.css.map */

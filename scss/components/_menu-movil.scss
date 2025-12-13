@@ -1,12 +1,8 @@
 @use "./../utils/variables-color" as u;
 
 nav {
-  background-color: white;
-  border: 1px solid rgb(221, 218, 218);
-  box-shadow: 1px 1px 4px rgb(95, 95, 95);
-  border-radius: 1rem;
-  font-size: 1.1rem;
-
+  background-color: u.$secondary-color;
+  border-radius: 0.5rem;
   ul {
     display: flex;
     justify-content: space-between;
@@ -18,22 +14,15 @@ nav {
       justify-content: center;
       align-items: center;
       padding: 0.5rem;
+      color: white;
+      border-radius: 0.5rem;
 
       &:hover {
-        color: u.$primari-hoverb;
-      }
-      span {
-        font-size: 25px;
-        color: u.$primari-color;
-        &:hover {
-          transform: translateY(-5px);
-          transition: all 0.22s;
-          color: rgb(7, 4, 156);
-        }
+        color: u.$tertiary-color;
+        background-color: rgba(192, 188, 188, 0.199);
       }
       
     }
-
   }
 }
 

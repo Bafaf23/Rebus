@@ -1,7 +1,7 @@
 @use "./../utils/variables-color" as u;
 
 .resumenes{
-  color:u.$primari-hoverb;
+  color:u.$primary-color;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -12,7 +12,7 @@
   gap: 20px;
   background-color: orange;
 
-  .conten{
+  .content{
     background-color: red;
   }
 }
