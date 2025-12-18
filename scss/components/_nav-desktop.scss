@@ -1,0 +1,78 @@
+@use "../utils/mixin" as mix;
+@use "../utils/variables-color" as u;
+
+.nav-desktop {
+  display: none;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .content-desktop {
+    width: 15%;
+
+    .nav-desktop {
+      @include mix.display(flex, space-around, stard);
+      flex-direction: column;
+      background-color: white;
+      border-radius: 0 20px 20px 0;
+      border: 1px solid rgb(216, 213, 213);
+      width: 100%;
+      height: 100%;
+      padding: 0.3rem;
+
+      .content-perfil-ul {
+        @include mix.display(flex, center, stard);
+        flex-direction: column;
+        gap: 2rem;
+
+        .content-titel-des {
+          a {
+            text-decoration: none;
+            color: blue;
+            font-size: 1.5rem;
+          }
+        }
+
+        .content-menu {
+          overflow: hidden;
+          padding: 0.5rem;
+          @include mix.display(flex, space-between, stard);
+          gap: 1rem;
+          flex-direction: column;
+
+          .link {
+            font-size: 1.2rem;
+            border-radius: 5px;
+            padding: 0.5rem;
+            cursor: pointer;
+            color: u.$primari-color;
+
+            &:hover {
+              background-color: rgb(238, 236, 236);
+            }
+          }
+        }
+      }
+      .content-btn {
+        width: 100%;
+
+        button {
+          padding: 0.3rem;
+          font-size: 1rem;
+          border: none;
+          border-radius: 5px;
+          width: 100%;
+          text-align: left;
+          background-color: transparent;
+          color: u.$primari-asento;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(252, 248, 192);
+            color: rgb(241, 201, 19);
+          }
+        }
+      }
+    }
+  }
+}

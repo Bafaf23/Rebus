@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--fontawesome CDN  -->
+    <script
+      src="https://kit.fontawesome.com/a74559d35e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Css externo -->
+    <link rel="stylesheet" href="../../css/main.css" />
+
+    <link rel="icon" href="../asset/img/RBO.png" />
+    <title>Rebus OE - Balance</title>
+  </head>
+  <body>
+    <div class="custom-shape-divider-top-1754052895">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+    <div class="wrapper">
+      <!-- menu desktop -->
+      <div class="content-desktop">
+        <nav class="nav-desktop">
+          <div class="content-perfil-ul">
+            <div class="content-titel-des">
+              <a href="" id="userDesktop"></a>
+            </div>
+            <ul class="content-menu">
+              <li class="link">
+                <span>
+                  <i class="fa-solid fa-money-bill"></i>
+                </span>
+                Balance
+              </li>
+              <li class="link">
+                <span>
+                  <i class="fa-solid fa-angle-up"></i>
+                </span>
+                Ingreso
+              </li>
+              <li class="link">
+                <span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+                Egreso
+              </li>
+              <li class="link">
+                <span>
+                  <i class="fa-solid fa-money-bill-transfer"></i>
+                </span>
+                Deuda
+              </li>
+            </ul>
+          </div>
+          <div class="content-btn">
+            <button id="logoutBtnDes">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Salir
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="wrapperdos">
+        <div class="content-main">
+          <header>
+            <!-- contenedor de logo -->
+            <div class="content-img">
+              <h1>RB<span class="styleO">O</span></h1>
+            </div>
+            <!-- Btn salir -->
+            <div class="content-btn">
+              <button id="logoutBtn">
+                Salir
+                <i class="fa-solid fa-right-from-bracket"></i>
+              </button>
+            </div>
+          </header>
+          <main class="animate__animated animate__fadeInUp">
+            <!-- welcome -->
+            <section class="section-welcome perfil">
+              <div class="wolcome">
+                <div class="avatar">
+                  <p class="user" id="avatar-perfil"></p>
+                </div>
+                <h1 id="welcome-perfil"></h1>
+              </div>
+            </section>
+          </main>
+        </div>
+        <footer class="footer">
+          <p class="info">
+            &copy; 2025 <span class="rbo">RBO</span> - Todos los derechos
+            reservados
+          </p>
+          <p class="version">V-2.0.02025</p>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="../../js/src/perfil/perfil.js"></script>
+  </body>
+</html>

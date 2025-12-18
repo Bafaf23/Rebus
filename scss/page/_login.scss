@@ -1,16 +1,14 @@
-@use"../utils/mixin" as mix;
-@use"../utils/variables-color" as u;
+@use "../utils/mixin" as mix;
+@use "../utils/variables-color" as u;
 
-.content-form{
+.content-form {
   @include mix.display(flex, center, center);
   flex-direction: column;
   gap: 0.5rem;
   height: 100%;
-  background-image: url(https://images.pexels.com/photos/4148187/pexels-photo-4148187.jpeg?cs=srgb&dl=pexels-walcouyi-4148187.jpg&fm=jpg);
-  background-size: cover;
   background-position: center;
 
-  .from{
+  .from {
     @include mix.display(flex, stard, stard);
     flex-direction: column;
     gap: 0.1rem;
@@ -21,52 +19,52 @@
     padding: 1rem;
     border: 1px solid rgb(161, 159, 159);
 
-    .content-titel{
+    .content-titel {
       @include mix.display(flex, center, stard);
       color: u.$primari-color;
       font-size: 1.5rem;
-      .styleO{
+      .styleO {
         color: cyan;
       }
     }
 
-    .wrapper-form{
+    .wrapper-form {
       @include mix.display(flex, center, stard);
       flex-direction: column;
       gap: 2rem;
       height: 100%;
-      .content-label_input{
+      .content-label_input {
         @include mix.display(flex, space-everly, stard);
         height: fit-content;
         flex-direction: column;
-        gap: 1rem;     
+        gap: 1rem;
         padding: 0.7rem;
-        .label{
+        .label {
           display: flex;
           gap: 0.5rem;
           flex-direction: column;
-  
-          label{
+
+          label {
             font-size: 1.2rem;
           }
-        
-          input{
+
+          input {
             width: fit-content;
             font-size: 1.2rem;
             padding: 0.2rem;
             outline: none;
             border: none;
-            border-bottom:1px solid rgb(3, 22, 107);
+            border-bottom: 1px solid rgb(3, 22, 107);
             background-color: rgb(248, 246, 246);
           }
         }
       }
-  
-      .content-btn{
+
+      .content-btn {
         display: flex;
         justify-content: center;
         margin-bottom: 0.5rem;
-        button{
+        button {
           background-color: u.$primari-color;
           border: none;
           color: white;
@@ -74,26 +72,22 @@
           padding: 0.7rem;
           cursor: pointer;
 
-        &:hover{
-          transition: all 100ms;
-          background-color: rgb(7, 121, 121);
+          &:hover {
+            transition: all 100ms;
+            background-color: rgb(7, 121, 121);
+          }
         }
-        }
-      }  
+      }
     }
   }
 }
 
-
-
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-  .content-form{
+  .content-form {
     @include mix.display(flex, stard, baseline);
 
-    .from{
+    .from {
       position: absolute;
       top: 0;
       height: 100%;

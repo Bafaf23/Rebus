@@ -34,129 +34,176 @@
       </svg>
     </div>
     <div class="wrapper">
-      <div>
-        <header>
-          <!-- contenedor de logo -->
-          <div class="content-img">
-            <h1>RB<span class="styleO">O</span></h1>
-          </div>
-          <!-- Btn salir -->
-          <div class="content-btn">
-            <button id="logoutBtn">
-              Salir
-              <i class="fa-solid fa-right-from-bracket"></i>
-            </button>
-          </div>
-        </header>
-        <main class="animate__animated animate__fadeInUp">
-          <!-- welcome -->
-          <section class="section-welcome">
-            <div class="wolcome">
-              <div class="avatar">
-                <p class="user">L</p>
-              </div>
-              <h1>Hola, user</h1>
+      <!-- menu desktop -->
+      <div class="content-desktop">
+        <nav class="nav-desktop">
+          <div class="content-perfil-ul">
+            <div class="content-titel-des">
+              <a href="" id="userDesktop"></a>
             </div>
-
-            <div class="dolar">
-              <h5>Dolar BCV</h5>
-              <div class="info-dolar">
-                <div id="dolar">270.00</div>
-                <sup>Bs</sup>
-              </div>
-            </div>
-          </section>
-          <!-- productos -->
-          <section class="productos">
-            <!-- titulo del contenedor -->
-            <div class="content-titel-section"><h2>Porductos</h2></div>
-            <!-- productos -->
-            <div class="content-balance">
-              <!-- card 1  -->
-              <div class="card">
-                <div class="info-card">
-                  <h2>Saldo</h2>
-                  <span class="tipoCuenta">tipo de cuenta</span>
-                </div>
-                <div class="saldo">
-                  <div id="saldo">0.00</div>
-                  <sup>Bs</sup>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Menu movil -->
-          <nav>
-            <ul>
-              <li>
+            <ul class="content-menu">
+              <li class="link">
                 <span>
                   <i class="fa-solid fa-money-bill"></i>
                 </span>
                 Balance
               </li>
-              <li>
+              <li class="link">
                 <span>
                   <i class="fa-solid fa-angle-up"></i>
                 </span>
                 Ingreso
               </li>
-              <li>
+              <li class="link">
                 <span>
                   <i class="fa-solid fa-angle-down"></i>
                 </span>
                 Egreso
               </li>
-              <li>
+              <li class="link">
                 <span>
                   <i class="fa-solid fa-money-bill-transfer"></i>
                 </span>
                 Deuda
               </li>
             </ul>
-          </nav>
-          <!-- hitorial -->
-          <section class="resuemenes">
-            <h2 class="titel-resumen">Transacciones</h2>
-            <div class="content-resumenes">
-              <!-- card -->
-              <div class="card-historial egreso">
-                <div class="historial-info">
-                  <h3>Nombre del comercio</h3>
-                  <span>12/01/2025</span>
-                </div>
-                <div class="historial-monto">
-                  <div id="monto">
-                    <span>-</span>
-                    100.00
-                  </div>
-                  <sup>Bs</sup>
-                </div>
-              </div>
-              <div class="card-historial ingreso">
-                <div class="historial-info">
-                  <h3>Nombre del comercio</h3>
-                  <span>12/01/2025</span>
-                </div>
-                <div class="historial-monto">
-                  <div id="monto">
-                    <span>+</span>
-                    100.00
-                  </div>
-                  <sup>Bs</sup>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
+          </div>
+          <div class="content-btn">
+            <button id="logoutBtnDes">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Salir
+            </button>
+          </div>
+        </nav>
       </div>
-      <footer class="footer">
-        <p class="info">
-          &copy; 2025 <span class="rbo">RBO</span> - Todos los derechos
-          reservados
-        </p>
-        <p class="version">V-2.0.02025</p>
-      </footer>
+      <div class="wrapperdos">
+        <div class="content-main">
+          <header>
+            <!-- contenedor de logo -->
+            <div class="content-img">
+              <h1>RB<span class="styleO">O</span></h1>
+            </div>
+            <!-- Btn salir -->
+            <div class="content-btn">
+              <button id="logoutBtn">
+                Salir
+                <i class="fa-solid fa-right-from-bracket"></i>
+              </button>
+            </div>
+          </header>
+          <main class="animate__animated animate__fadeInUp">
+            <!-- welcome -->
+            <section class="section-welcome">
+              <a href="perfil/perfil.html">
+                <div class="wolcome">
+                  <div class="avatar">
+                    <p class="user" id="avatar"></p>
+                  </div>
+                  <h1 id="welcome"></h1>
+                </div>
+              </a>
+
+              <div class="dolar">
+                <h5>Dolar BCV</h5>
+                <div class="info-dolar">
+                  <div id="dolar"></div>
+                  <sup>Bs</sup>
+                </div>
+              </div>
+            </section>
+            <!-- productos -->
+            <section class="productos">
+              <!-- titulo del contenedor -->
+              <div class="content-titel-section"><h2>Porductos</h2></div>
+              <!-- productos -->
+              <div class="content-balance">
+                <!-- card 1  -->
+                <div class="card">
+                  <div class="info-card">
+                    <h2>Saldo</h2>
+                    <span class="tipoCuenta">tipo de cuenta</span>
+                  </div>
+                  <div class="saldo">
+                    <div id="saldo">0.00</div>
+                    <sup>Bs</sup>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Menu movil -->
+            <nav class="nav-movil">
+              <ul class="content-menu">
+                <li>
+                  <span>
+                    <i class="fa-solid fa-money-bill"></i>
+                  </span>
+                  Balance
+                </li>
+                <li>
+                  <span>
+                    <i class="fa-solid fa-angle-up"></i>
+                  </span>
+                  Ingreso
+                </li>
+                <li>
+                  <span>
+                    <i class="fa-solid fa-angle-down"></i>
+                  </span>
+                  Egreso
+                </li>
+                <li>
+                  <span>
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                  </span>
+                  Deuda
+                </li>
+              </ul>
+            </nav>
+            <!-- hitorial -->
+            <section class="resuemenes">
+              <h2 class="titel-resumen">Transacciones</h2>
+              <div class="content-resumenes">
+                <!-- card -->
+                <div class="card-historial egreso">
+                  <div class="historial-info">
+                    <h3>Nombre del comercio</h3>
+                    <span>12/01/2025</span>
+                  </div>
+                  <div class="historial-monto">
+                    <div id="monto">
+                      <span>-</span>
+                      100.00
+                    </div>
+                    <sup>Bs</sup>
+                  </div>
+                </div>
+                <div class="card-historial ingreso">
+                  <div class="historial-info">
+                    <h3>Nombre del comercio</h3>
+                    <span>12/01/2025</span>
+                  </div>
+                  <div class="historial-monto">
+                    <div id="monto">
+                      <span>+</span>
+                      100.00
+                    </div>
+                    <sup>Bs</sup>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+        <footer class="footer">
+          <p class="info">
+            &copy; 2025 <span class="rbo">RBO</span> - Todos los derechos
+            reservados
+          </p>
+          <p class="version">V-2.0.02025</p>
+        </footer>
+      </div>
     </div>
-    <script src="../js/src/dashboard/dashboard.js"></script>
+    <script type="module" src="../js/src/dashboard/dashboard.js"></script>
+    <script type="module" src="../js/src/api/dolarApi.js"></script>
   </body>
 </html>

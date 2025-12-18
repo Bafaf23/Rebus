@@ -1,13 +1,14 @@
-
 @use "base/reset";
 
 @use "components/card";
 @use "components/menu-movil";
 @use "components/card-historial";
-@use"components/alert";
+@use "components/alert";
+@use "components/nav-desktop";
 
-@use"page/login";
+@use "page/login";
 @use "page/register";
+@use "page/perfil";
 
 @use "layout/header";
 @use "layout/linea";
@@ -16,6 +17,4 @@
 @use "layout/welcome";
 @use "layout/resumenes";
 
-@use "layout/footer"
-
-
+@use "layout/footer";
