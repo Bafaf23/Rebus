@@ -1,0 +1,49 @@
+Proyecto Final de JavaScript
+
+Desarrollar un sitio web empleando HTML, CSS y Javascript que simule un sistema de
+administración de usuarios.
+
+El mismo debe contar con las siguientes funcionalidades:
+- Registro de nuevos usuarios (con usuario/email y contraseña).
+- Inicio de sesión.
+- Administración de perfil (Cambio de info. básica como Nombres, Apellidos, etc.).
+
+El sitio deberá contener, al menos, dos roles de usuario:
+1. Usuarios comúnes.
+2. Administradores.
+
+Los administradores deberán ser capaces de:
+- Crear nuevos usuarios.
+- Modificar usuarios existentes.
+- Eliminar usuarios.
+- Ver el listado de los usuarios registrados.
+Nota: CRUD (Create, Read, Update, Delete)
+
+El sitio debe contar con reglas de Autenticación y Autorización; esto es:
+- Un usuario no autenticado (que no ha iniciado sesión) no debe ser capaz de acceder
+a las páginas "internas" del sitio.
+- Un usuario autenticado (que ha iniciado sesión) no debe ser capaz de acceder
+a la páginas "externas" del sitio sin cerrar su sesión.
+- Un usuario no autorizado (que no pertenezca al rol "Administrador") no debe ser capaz de
+acceder a las páginas destinadas a los administradores.
+
+Cada campo de texto o similar debe contar con validaciones que permitan asegurar la integridad de los datos.
+
+Toda la información del sitio debe ser almacenada en localStorage, simulando una base de datos
+real utilizando objetos de JavaScript.
+
+El desarrollador es libre de decidir como crear Usuarios Administradores y como revocar
+dichos permisos.
+
+Con respecto al apartado visual, el sitio debe contar con un diseño agradable y una experciencia de usuario
+óptima.
+
+Notas para el registro/creación de usuarios:
+No se debe permitir el registro/creación de usuarios/emails registrados con anterioridad.
+
+Opcional: Agregar encriptación a las contraseñas usando Vanilla JavaScript.
+Opcional: Soportar cambios de usuario/email y cambio de contraseñas.
+Opcional: Crear un botón de "recuérdame" capaz de recordar el inicio de sesión del
+último usuario.
+
+Fecha: 23/12/2025

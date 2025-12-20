@@ -1,0 +1,81 @@
+.denied-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  overflow: hidden;
+}
+.denied-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.glass-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 450px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+.glass-container .icon-box {
+  font-size: 5rem;
+  color: #ff4757;
+  margin-bottom: 1.5rem;
+}
+.glass-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.glass-container p {
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+.glass-container .actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.glass-container .actions .btn-primary,
+.glass-container .actions .btn-secondary {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+.glass-container .actions .btn-primary {
+  background: #00d2ff;
+  color: #111;
+}
+.glass-container .actions .btn-primary:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+.glass-container .actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glass-container .actions .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}/*# sourceMappingURL=denegado.css.map */

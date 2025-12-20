@@ -16,8 +16,8 @@
     <!-- Css externo -->
     <link rel="stylesheet" href="../../css/main.css" />
 
-    <link rel="icon" href="../asset/img/RBO.png" />
-    <title>Rebus OE - Balance</title>
+    <link rel="icon" href="../../asset/img/RBO-removebg-preview.png" />
+    <title>Rebus OE - mi perfil</title>
   </head>
   <body>
     <div class="custom-shape-divider-top-1754052895">
@@ -35,19 +35,22 @@
     </div>
     <div class="wrapper">
       <!-- menu desktop -->
-      <div class="content-desktop">
+      <aside class="content-desktop">
         <nav class="nav-desktop">
           <div class="content-perfil-ul">
             <div class="content-titel-des">
-              <a href="" id="userDesktop"></a>
+              <a href="perfil.html" id="userDesktop"></a>
+              <p id="isAdmin"></p>
             </div>
             <ul class="content-menu">
-              <li class="link">
-                <span>
-                  <i class="fa-solid fa-money-bill"></i>
-                </span>
-                Balance
-              </li>
+              <a href="../dashboard.html">
+                <li class="link">
+                  <span>
+                    <i class="fa-solid fa-money-bill"></i>
+                  </span>
+                  Balance
+                </li>
+              </a>
               <li class="link">
                 <span>
                   <i class="fa-solid fa-angle-up"></i>
@@ -66,6 +69,14 @@
                 </span>
                 Deuda
               </li>
+              <a href="../admin/dashboard-admin.html"
+                ><li id="pnAdmi" class="link">
+                  <span>
+                    <i class="fa-solid fa-wrench"></i>
+                  </span>
+                  Panel de control
+                </li></a
+              >
             </ul>
           </div>
           <div class="content-btn">
@@ -75,7 +86,7 @@
             </button>
           </div>
         </nav>
-      </div>
+      </aside>
       <div class="wrapperdos">
         <div class="content-main">
           <header>
@@ -83,22 +94,73 @@
             <div class="content-img">
               <h1>RB<span class="styleO">O</span></h1>
             </div>
-            <!-- Btn salir -->
-            <div class="content-btn">
-              <button id="logoutBtn">
-                Salir
-                <i class="fa-solid fa-right-from-bracket"></i>
-              </button>
+            <!-- Btn retroseder -->
+            <div class="content-btn-perfil">
+              <a href="../dashboard.html">
+                <i class="fa-solid fa-arrow-left"></i>
+              </a>
+              <p>Mi perfil</p>
             </div>
           </header>
           <main class="animate__animated animate__fadeInUp">
-            <!-- welcome -->
-            <section class="section-welcome perfil">
-              <div class="wolcome">
+            <div id="alert"></div>
+            <!--  card-info-perfil -->
+            <section class="perfil">
+              <div class="card-perfil">
                 <div class="avatar">
-                  <p class="user" id="avatar-perfil"></p>
+                  <p class="user" id="avatar"></p>
                 </div>
-                <h1 id="welcome-perfil"></h1>
+                <div class="acount">
+                  <i class="fa-solid fa-user"></i>
+                  <p id="acount"></p>
+                </div>
+                <h1 id="name">Usuario</h1>
+                <p id="typeUser" class="acount"></p>
+                <div class="content-btn">
+                  <button id="converAdmin"></button>
+                  <a href="../admin/dashboard-admin.html" id="pcMovil">
+                    <button>
+                      <i class="fa-solid fa-wrench"></i>
+                      Panel de Control
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <!-- tus datos -->
+            <section class="perfil-info">
+              <div class="card-perfil">
+                <!--   titel y btn -->
+                <div class="titel">
+                  <h4>Tus datos</h4>
+                  <div>
+                    <button id="edit">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- datos -->
+                <div class="content-info-perfil">
+                  <div class="info-perfil">
+                    <div>
+                      <label for="">Nombre</label>
+                      <input type="text" id="input-name" readonly />
+                    </div>
+                    <div>
+                      <label for="">Apellido</label>
+                      <input type="text" id="input-lastname" readonly />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="">Correo</label>
+                    <input type="email" id="input-emial" readonly />
+                  </div>
+                </div>
+                <!-- btn guardar cambios -->
+                <div class="content-btn-perfil">
+                  <button id="guardar" class="btn">Guardar</button>
+                </div>
               </div>
             </section>
           </main>
@@ -112,6 +174,8 @@
         </footer>
       </div>
     </div>
-    <script type="module" src="../../js/src/perfil/perfil.js"></script>
+    <script type="module" src="../../js/perfil/perfil.js"></script>
+    <script type="module" src="../../js/dashboard/dashboard.js"></script>
+    <script type="module" src="../../js/regex/regex.js"></script>
   </body>
 </html>

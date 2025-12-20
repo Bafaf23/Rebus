@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--fontawesome CDN  -->
+    <script
+      src="https://kit.fontawesome.com/a74559d35e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <title>Panel de Administración</title>
+  </head>
+  <body class="animate__animated animate__fadeIn">
+    <!-- Contenedor para tus mensajes -->
+    <div id="alert"></div>
+
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar-glass">
+        <div class="logo">
+          <i class="fa-solid fa-microchip"></i>
+          <span>RB<span class="styleO">O</span></span>
+        </div>
+        <nav>
+          <a href="../dashboard.html" class="active"
+            ><i class="fa-solid fa-house"></i> Regresar a RBO</a
+          >
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="header-glass">
+          <h1>Panel de Control</h1>
+          <div class="admin-profile">
+            <span id="admin-name">Admin</span>
+            <div id="precio-dolar" class="dolar-badge">Cargando...</div>
+          </div>
+        </header>
+
+        <!-- Cards -->
+        <section class="stats-grid">
+          <div class="card-glass">
+            <i class="fa-solid fa-user-group"></i>
+            <div>
+              <h3>Total Usuarios</h3>
+              <p id="total-users">0</p>
+            </div>
+          </div>
+          <div class="card-glass">
+            <i class="fa-solid fa-user-shield"></i>
+            <div>
+              <h3>Administradores</h3>
+              <p id="total-admins">0</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Table -->
+        <section class="table-glass">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rango</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id="users-table-body">
+              <!-- JS rellena esto -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="../../js/dashboard/dashboard-admi.js" type="module"></script>
+    <script src="../../js/api/dolarApi.js" type="module"></script>
+  </body>
+</html>

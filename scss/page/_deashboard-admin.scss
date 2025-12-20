@@ -1,0 +1,113 @@
+$glass-bg: rgb(255, 255, 255);
+$glass: rgba(255, 255, 255, 0.1);
+$glass-border: rgb(228, 228, 228);
+$accent: #00d2ff;
+
+@mixin glass-effect {
+  background: $glass-bg;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid $glass-border;
+  border-radius: 15px;
+}
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: rgb(243, 243, 243); // Capa para legibilidad
+}
+
+.sidebar-glass {
+  width: 250px;
+  background: rgb(16, 1, 99);
+  border-right: 1px solid $glass-border;
+  padding: 2rem;
+
+  .logo {
+    font-size: 1.5rem;
+    color: $accent;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 10px;
+  }
+
+  nav a,
+  .btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  nav a:hover,
+  nav a.active {
+    background: $glass;
+    border: 1px solid $glass-border;
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+
+  .header-glass {
+    @include glass-effect;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .admin-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: rgb(247, 247, 247);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 2rem;
+
+    .card-glass {
+      @include glass-effect;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      i {
+        font-size: 2.5rem;
+        color: $accent;
+      }
+    }
+  }
+
+  .table-glass {
+    @include glass-effect;
+    padding: 1.5rem;
+    overflow-x: auto;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 2px solid $glass-border;
+      color: $accent;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  }
+}

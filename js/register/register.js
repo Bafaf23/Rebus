@@ -1,4 +1,11 @@
 import { hashPassaword } from "../hash/hash.js";
+import {
+  validacionInput,
+  userPattern,
+  userLastPattern,
+  emailPattern,
+  passPattern,
+} from "../regex/regex.js";
 
 /* accediendo a los elementos el DOM */
 const contentAlert = document.getElementById("alert");
@@ -38,36 +45,45 @@ if (register) {
     const passwod = document.getElementById("passwordRegister");
 
     let rawPassword = passwod.value.trim();
-
-    let passawordSegura = await hashPassaword(rawPassword);
-
-    const newUser = {
-      id: Date.now(),
-      name: nameInput.value.trim(),
-      lastName: lastName.value.trim(),
-      email: email.value.trim(),
-      passwod: passawordSegura,
-      admi: false,
-    };
+    let rawLastName = lastName.value.trim();
+    let rawEmail = email.value.trim();
+    let rawName = nameInput.value.trim();
 
     if (
-      newUser.name === "" ||
-      newUser.lastName === "" ||
-      newUser.email === "" ||
-      newUser.passwod === ""
+      rawPassword === "" ||
+      rawLastName === "" ||
+      rawEmail === "" ||
+      rawName === ""
     ) {
       return mesassege(`los campos no pueden estar vacios`, `Campos vacios`);
     }
 
-    const exiteEmial = registerData.some(
-      (usuario) => usuario.email === newUser.email
-    );
+    if (!validacionInput(rawEmail, emailPattern)) {
+      return mesassege(`Formato del correo incorrecto`, `Formato`);
+    }
+    if (!validacionInput(rawPassword, passPattern)) {
+      return mesassege(`Contraseña no cumple los requisitos ❌`, `Seguridad`);
+    }
 
+    const exiteEmial = registerData.some(
+      (usuario) => usuario.email === rawEmail
+    );
     if (exiteEmial)
       return mesassege(
         `El correo electronico ya esta registrado`,
         `Campos duplicados`
       );
+
+    let passawordSegura = await hashPassaword(rawPassword);
+
+    const newUser = {
+      id: Date.now(),
+      name: rawName,
+      lastName: rawLastName,
+      email: rawEmail,
+      passwod: passawordSegura,
+      admi: false,
+    };
 
     registerData.push(newUser);
 

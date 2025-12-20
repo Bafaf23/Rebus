@@ -50,8 +50,16 @@
                 placeholder="********"
               />
             </div>
+            <div class="regex">
+              <p>La contrasena debe tener:</p>
+              <ul>
+                <li>Un caracter especial <span>!@#$%^&*</span></li>
+                <li>una minúscula y una mayúscula</li>
+                <li>Debe ser alfa numerica</li>
+                <li>Una longuitud de 8 a 16 caracteres</li>
+              </ul>
+            </div>
           </div>
-
           <div class="content-btn">
             <button class="btn" type="submit" id="register">Registarme</button>
           </div>
@@ -60,7 +68,8 @@
       </form>
     </div>
 
-    <script type="module" src="../js/src/register/register.js"></script>
-    <script type="module" src="../js/src/hash/hash.js"></script>
+    <script type="module" src="../js/register/register.js"></script>
+    <script type="module" src="../js/hash/hash.js"></script>
+    <script type="module" src="../js/regex/regex.js"></script>
   </body>
 </html>
