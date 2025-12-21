@@ -134,14 +134,14 @@ a {
 .alert {
   position: absolute;
   top: 20px;
-  right: 5px;
+  left: 5px;
   padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   background-color: white;
-  border-left: 1px solid blue;
+  border-right: 5px solid rgb(34, 158, 3);
 }
 .alert .ico {
   color: blue;
@@ -482,6 +482,15 @@ a {
     display: none;
   }
 }
+.atras {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.atras a {
+  color: #05b5dd;
+}
+
 .admin-container {
   display: flex;
   min-height: 100vh;
@@ -489,10 +498,12 @@ a {
 }
 
 .sidebar-glass {
-  width: 250px;
+  display: none;
+  width: 16rem;
   background: rgb(16, 1, 99);
   border-right: 1px solid rgb(228, 228, 228);
   padding: 2rem;
+  border-radius: 0 1rem 1rem 0;
 }
 .sidebar-glass .logo {
   font-size: 1.5rem;
@@ -522,7 +533,7 @@ a {
 
 .main-content {
   flex: 1;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .main-content .header-glass {
   background: rgb(255, 255, 255);
@@ -530,7 +541,7 @@ a {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(228, 228, 228);
   border-radius: 15px;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -574,21 +585,137 @@ a {
   padding: 1.5rem;
   overflow-x: auto;
 }
+.main-content .table-glass .header-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  color: #0059ff;
+}
 .main-content .table-glass table {
+  display: none;
   width: 100%;
   border-collapse: collapse;
 }
 .main-content .table-glass th {
   text-align: left;
-  padding: 12px;
+  padding: 0.6rem;
   border-bottom: 2px solid rgb(228, 228, 228);
   color: #00d2ff;
 }
 .main-content .table-glass td {
-  padding: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(223, 221, 221);
+}
+.main-content .table-glass input {
+  font-size: 1rem;
+  height: 100%;
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  color: gray;
+}
+.main-content .table-glass .id {
+  font-weight: bold;
+}
+.main-content .table-glass .content-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-content .table-glass .content-btn .btn {
+  background-color: #01e226;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+.main-content .table-glass .content-btn .btn:hover {
+  background-color: #05b10d;
+}
+.main-content .table-glass .content-btn .btn-elimina {
+  padding: 0.7rem;
+  background-color: red;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+.main-content .table-glass .content-btn .btn-elimina:hover {
+  background-color: rgb(167, 7, 7);
+}
+.main-content .table-glass .content-btn .btn-actualizar {
+  padding: 0.7rem;
+  background-color: #00d2ff;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+.main-content .table-glass .content-btn .btn-actualizar:hover {
+  background-color: #06b0d6;
+}
+.main-content .table-glass .content-btn .btn-guardar {
+  padding: 0.7rem;
+  background-color: #ff8800;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+.main-content .table-glass .content-btn .btn-guardar:hover {
+  background-color: #d6a506;
 }
 
+/* tabla movil */
+.tabla-movil {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+.tabla-movil .row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  background-color: rgb(250, 250, 250);
+  border-radius: 0.5rem;
+}
+.tabla-movil .colum {
+  display: flex;
+  gap: 1rem;
+}
+.tabla-movil .colum .header {
+  width: 20%;
+  color: #00d2ff;
+  font-weight: bold;
+}
+.tabla-movil .colum input {
+  font-size: 1rem;
+  width: 80%;
+  padding: 0.3rem;
+  border: none;
+  border-bottom: 1px solid rgb(1, 1, 138);
+  outline: none;
+  color: gray;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .sidebar-glass {
+    display: block;
+  }
+  .atras {
+    display: none;
+  }
+  .table-glass table {
+    display: table !important;
+  }
+  .tabla-movil {
+    display: none;
+  }
+}
 .denied-body {
   height: 100vh;
   display: flex;

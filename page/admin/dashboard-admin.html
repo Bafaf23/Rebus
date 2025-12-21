@@ -31,6 +31,12 @@
 
       <!-- Main Content -->
       <main class="main-content">
+        <div class="atras">
+          <a href="../dashboard.html">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            atras
+          </a>
+        </div>
         <header class="header-glass">
           <h1>Panel de Control</h1>
           <div class="admin-profile">
@@ -38,7 +44,6 @@
             <div id="precio-dolar" class="dolar-badge">Cargando...</div>
           </div>
         </header>
-
         <!-- Cards -->
         <section class="stats-grid">
           <div class="card-glass">
@@ -56,26 +61,60 @@
             </div>
           </div>
         </section>
-
         <!-- Table -->
         <section class="table-glass">
+          <div class="header-table">
+            <div class="titel">
+              <h2>Registros</h2>
+            </div>
+            <div class="content-btn">
+              <button class="btn">
+                <span><i class="fa-solid fa-plus"></i></span>
+                agregar
+              </button>
+            </div>
+          </div>
+
+          <!-- tabla desktop -->
           <table>
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Nombre</th>
+                <th>Apellido</th>
                 <th>Email</th>
                 <th>Rango</th>
                 <th>Acción</th>
               </tr>
             </thead>
-            <tbody id="users-table-body">
-              <!-- JS rellena esto -->
-            </tbody>
+            <tbody id="users-table-body"></tbody>
           </table>
+          <!-- tabla movil -->
+          <div class="tabla-movil" id="tablaMovil"></div>
         </section>
       </main>
     </div>
     <script src="../../js/dashboard/dashboard-admi.js" type="module"></script>
     <script src="../../js/api/dolarApi.js" type="module"></script>
+    <script>
+      document.getElementById("tablaMovil").addEventListener("click", (e) => {
+        // Buscamos si el clic fue en el botón de actualizar o sus iconos
+        const btn = e.target.closest(".btn-actualizar");
+
+        if (btn) {
+          const fila = btn.closest(".row");
+          const inputs = fila.querySelectorAll("input");
+
+          inputs.forEach((input) => {
+            input.readOnly = false;
+            input.style.backgroundColor = "#fff";
+            input.style.borderButton = "1px solid #00d2ff";
+            input.style.color = "black";
+          });
+
+          if (inputs.length > 0) inputs[0].focus();
+        }
+      });
+    </script>
   </body>
 </html>

@@ -11,6 +11,16 @@ $accent: #00d2ff;
   border-radius: 15px;
 }
 
+.atras {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+
+  a {
+    color: #05b5dd;
+  }
+}
+
 .admin-container {
   display: flex;
   min-height: 100vh;
@@ -18,10 +28,12 @@ $accent: #00d2ff;
 }
 
 .sidebar-glass {
-  width: 250px;
+  display: none;
+  width: 16rem;
   background: rgb(16, 1, 99);
   border-right: 1px solid $glass-border;
   padding: 2rem;
+  border-radius: 0 1rem 1rem 0;
 
   .logo {
     font-size: 1.5rem;
@@ -54,11 +66,11 @@ $accent: #00d2ff;
 
 .main-content {
   flex: 1;
-  padding: 1rem;
+  padding: 0.5rem;
 
   .header-glass {
     @include glass-effect;
-    padding: 1rem 2rem;
+    padding: 0.5rem 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,19 +107,155 @@ $accent: #00d2ff;
     @include glass-effect;
     padding: 1.5rem;
     overflow-x: auto;
+
+    .header-table {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      color: #0059ff;
+    }
+
     table {
+      display: none;
       width: 100%;
       border-collapse: collapse;
     }
     th {
       text-align: left;
-      padding: 12px;
+      padding: 0.6rem;
       border-bottom: 2px solid $glass-border;
       color: $accent;
     }
     td {
-      padding: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.5rem;
+      border-bottom: 1px solid rgb(223, 221, 221);
     }
+
+    input {
+      font-size: 1rem;
+      height: 100%;
+      padding: 0.3rem;
+      border: none;
+      outline: none;
+      color: gray;
+    }
+
+    .id {
+      font-weight: bold;
+    }
+    .content-btn {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 0.5rem;
+
+      .btn {
+        background-color: #01e226;
+        border: none;
+        padding: 0.5rem;
+        color: white;
+        cursor: pointer;
+        border-radius: 0.4rem;
+        &:hover {
+          background-color: #05b10d;
+        }
+      }
+
+      .btn-elimina {
+        padding: 0.7rem;
+        background-color: red;
+        border-radius: 0.5rem;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(167, 7, 7);
+        }
+      }
+
+      .btn-actualizar {
+        padding: 0.7rem;
+        background-color: #00d2ff;
+        border-radius: 0.5rem;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #06b0d6;
+        }
+      }
+
+      .btn-guardar {
+        padding: 0.7rem;
+        background-color: #ff8800;
+        border-radius: 0.5rem;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #d6a506;
+        }
+      }
+    }
+  }
+}
+
+/* tabla movil */
+.tabla-movil {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.3rem;
+  width: 100%;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.5rem;
+    background-color: rgb(250, 250, 250);
+    border-radius: 0.5rem;
+  }
+
+  .colum {
+    display: flex;
+    gap: 1rem;
+
+    .header {
+      width: 20%;
+      color: #00d2ff;
+      font-weight: bold;
+    }
+
+    input {
+      font-size: 1rem;
+      width: 80%;
+      padding: 0.3rem;
+      border: none;
+      border-bottom: 1px solid rgb(1, 1, 138);
+      outline: none;
+      color: gray;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .sidebar-glass {
+    display: block;
+  }
+
+  .atras {
+    display: none;
+  }
+
+  .table-glass {
+    table {
+      display: table !important; // 3. Muestra la tabla real en pantallas grandes
+    }
+  }
+  .tabla-movil {
+    display: none;
   }
 }
