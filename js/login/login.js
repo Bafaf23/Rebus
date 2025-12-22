@@ -2,7 +2,6 @@ import { mesassege } from "../register/register.js";
 import { hashPassaword } from "../hash/hash.js";
 
 let userData = JSON.parse(localStorage.getItem("dataUsers")) || [];
-console.log(userData);
 
 const loginbtn = document.getElementById("loginBtn");
 
