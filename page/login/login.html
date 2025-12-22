@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--fontawesome CDN  -->
+    <script
+      src="https://kit.fontawesome.com/a74559d35e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <title>RBO</title>
+  </head>
+  <body>
+    <div class="content-form">
+      <div id="alert"></div>
+      <form action="#" class="from">
+        <div class="content-titel">
+          <a href="../../index.html">
+            <h2>RB<span class="styleO">O</span></h2>
+          </a>
+        </div>
+        <div class="wrapper-form">
+          <h2>Inicia Secion</h2>
+          <div class="content-label_input">
+            <div class="label">
+              <label for="">Usuario</label>
+              <input
+                type="email"
+                id="UserEmail"
+                placeholder="usuario@compani.com"
+              />
+            </div>
+            <div class="label">
+              <label for="">Contrasena</label>
+              <input
+                type="password"
+                name="user"
+                id="pasUser"
+                placeholder="********"
+              />
+            </div>
+          </div>
+
+          <div class="content-btn">
+            <button class="btn" id="loginBtn" type="submit">Entrar</button>
+          </div>
+          <p>
+            No tienes cuenta?,
+            <a href="../registro/register.html">registrate</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="../../js/login/login.js"></script>
+    <script type="module" src="../../js/hash/hash.js"></script>
+    <script type="module" src="../../js/dashboard/dashboard.js"></script>
+  </body>
+</html>

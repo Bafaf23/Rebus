@@ -1,5 +1,6 @@
 import { getData } from "../api/dolarApi.js";
 import { mesassege } from "../register/register.js";
+import { validacionInput, passPattern, emailPattern } from "../regex/regex.js";
 
 let dataUsers = JSON.parse(localStorage.getItem("dataUsers"));
 let user = JSON.parse(localStorage.getItem("userSession"));
@@ -9,12 +10,27 @@ const precioDolar = document.getElementById("precio-dolar");
 const totalUser = document.getElementById("total-users");
 const totaAdmin = document.getElementById("total-admins");
 
-function exit() {
-  if (user.admi === false) {
-    window.location.href = `../../page/accsesodenegado/denegado.html`;
+(function exit() {
+  let seccion = JSON.parse(localStorage.getItem("userSession"));
+  const pathname = window.location.pathname;
+  const isPageLogin = pathname.includes("login.html") || pathname.endsWith("/");
+
+  if (!seccion) {
+    // Si no hay sesión y no estoy en el login, redirigir al inicio
+    if (!isPageLogin) {
+      window.location.href = "../../index.html";
+    }
+  } else {
+    // Si HAY sesión pero el usuario NO es admin
+    if (seccion.admi === false) {
+      window.location.href = "../../page/accsesodenegado/denegado.html";
+    }
+    // Si ya está logueado e intenta ir al login
+    if (isPageLogin) {
+      window.location.href = "../dasboard.html"; // O al dashboard
+    }
   }
-}
-exit();
+})();
 
 nameAdmin.textContent = `Hola, ${user.name}`;
 
@@ -22,6 +38,11 @@ nameAdmin.textContent = `Hola, ${user.name}`;
 getData(`https://ve.dolarapi.com/v1/dolares/oficial`).then((data) => {
   renderDolar(data);
 });
+
+/**
+ * funcion para renderisar el precio del dolar
+ * @param {*} data
+ */
 function renderDolar(data) {
   let dataDolar = data;
   if (precioDolar) {
@@ -32,18 +53,30 @@ function renderDolar(data) {
   }
 }
 
+/**
+ * funcion que renderisa la cantida de usurios registrados en la app
+ * @function
+ */
+
 function renderUser() {
   let userTotal = dataUsers.length;
   totalUser.textContent = userTotal;
 }
 renderUser();
-
+/**
+ * funcion que renderisa cantida de admin
+ * @function
+ */
 function renderAdmin() {
   const cantidadAdmins = dataUsers.filter((user) => user.admi === true).length;
   totaAdmin.textContent = cantidadAdmins;
 }
 renderAdmin();
 
+/**
+ * funcinon que desactiva el bloque de los inputs para modificar los datos de los usuarios
+ * @param {*} btn actualizar
+ */
 function preEditTabla(btn) {
   // Buscamos el contenedor '.row' más cercano al botón
   const fila = btn.closest("tr") || btn.closest(".row");
@@ -67,6 +100,11 @@ function preEditTabla(btn) {
 }
 window.preEdit = preEditTabla;
 
+/**
+ * funcion que actualiza los datos del usuario, name, lastname, emal
+ * @param {*} fila
+ * @param {*} id
+ */
 function actualizar(id, fila) {
   // 1. Obtener los nuevos valores de los inputs de la fila
   const nuevoNombre = fila.querySelector(".input-name").value.trim();
@@ -76,6 +114,11 @@ function actualizar(id, fila) {
   // 2. Buscar el usuario en el array global dataUsers
   const index = dataUsers.findIndex((u) => u.id === id);
 
+  if (!validacionInput(nuevoEmail, emailPattern))
+    return mesassege(
+      `El correo ingresado no cumple con las caracteristicas`,
+      `Error`
+    );
   if (index !== -1) {
     dataUsers[index].name = nuevoNombre;
     dataUsers[index].lastName = nuevoApellido;
@@ -94,6 +137,11 @@ function actualizar(id, fila) {
   }
 }
 
+/**
+ *funcion que elimina al usuario de la tabala y de la data
+ * @param {*} id
+ * @param {*} fila
+ */
 function eliminarUsuario(id, fila) {
   // 1. Confirmación de seguridad
   if (!confirm("¿Estás seguro de que deseas eliminar este usuario?")) return;

@@ -1,3 +1,10 @@
+/**
+ * funcion que encrita la clave del usuario
+ *
+ * @param {*} passwod
+ * @returns clave encritapda
+ */
+
 export async function hashPassaword(passwod) {
   const encoder = new TextEncoder();
   const data = encoder.encode(passwod);

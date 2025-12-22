@@ -1,59 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--fontawesome CDN  -->
+    <!-- fontawesone -->
     <script
       src="https://kit.fontawesome.com/a74559d35e.js"
       crossorigin="anonymous"
     ></script>
-    <!-- CSS animation -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>RBO</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Inicio - REBO</title>
   </head>
   <body>
-    <div class="content-form">
-      <div id="alert"></div>
-      <form action="#" class="from">
-        <div class="content-titel">
-          <h2>RB<span class="styleO">O</span></h2>
-        </div>
-        <div class="wrapper-form">
-          <h2>Inicia Secion</h2>
-          <div class="content-label_input">
-            <div class="label">
-              <label for="">Usuario</label>
-              <input
-                type="email"
-                id="UserEmail"
-                placeholder="usuario@compani.com"
+    <!-- encabezado -->
+    <header>
+      <div class="logo">
+        <img
+          class="logo"
+          src="./asset/img/RBO-removebg-preview.png"
+          alt="logo"
+        />
+      </div>
+      <div class="nav">
+        <nav>
+          <a href="">Inicio</a>
+          <a href="">Contacto</a>
+          <a href="">Ubícanos</a>
+        </nav>
+      </div>
+      <div class="botones">
+        <a href="page/login/login.html">
+          <button class="acceso">Acceder</button>
+        </a>
+      </div>
+      <!-- menú móvil -->
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero (sección principal) -->
+      <section class="hero">
+        <div class="wallpaper-carousel">
+          <div class="carousel">
+            <div class="card" id="card1">
+              <img
+                src="https://images.unsplash.com/photo-1520209759809-a9bcb6cb3241?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fHww"
+                alt="Bienvenida"
               />
+              <div class="wraper-txt">
+                <div class="content-txt">
+                  <h1>¡Bienvenido a RBO!</h1>
+                  <p>El paraíso para planificar tus finanzas</p>
+                  <p>
+                    No se trata solo de organizar, se trata de sentirte bien al
+                    planificar.
+                  </p>
+                </div>
+                <div class="btn-mas">
+                  <button>Ver más</button>
+                </div>
+              </div>
             </div>
-            <div class="label">
-              <label for="">Contrasena</label>
-              <input
-                type="password"
-                name="user"
-                id="pasUser"
-                placeholder="********"
+
+            <div class="card" id="card2">
+              <img
+                src="https://walpaper.es/wallpaper/2017/04/imagenes-de-paisajes-relajantes.jpg"
+                alt="Sin efectivo"
               />
+              <div class="wraper-txt">
+                <div class="content-txt">
+                  <h1>Cashlles</h1>
+                  <p>El mejor lugar para organizar tu ecosistema financiero</p>
+                  <p>
+                    Con proyección para crear un plan financiero institucional
+                  </p>
+                </div>
+                <div class="btn-mas">
+                  <button>Ver más</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" id="card3">
+              <img
+                src="https://www.kalanobleas.com/wp-content/uploads/2023/11/Ejercicios-de-relajacion-y-meditacion-para-principiantes-2-1.png"
+                alt="Un solo lugar"
+              />
+              <div class="wraper-txt">
+                <div class="content-txt">
+                  <h1>¡En un solo lugar!</h1>
+                  <p>Mil cuentas, un solo lugar para organizar tus finanzas</p>
+                  <p>100% seguro y confiable. No hay nada de qué preocuparse</p>
+                </div>
+                <div class="btn-mas">
+                  <button>Ver más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <a href="#card1"></a>
+            <a href="#card2"></a>
+            <a href="#card3"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- productos/servicios -->
+      <section class="products">
+        <div class="content-products">
+          <div class="product">
+            <div class="icon-p">
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="content-txt-p">
+              <h2>Registro de ingresos</h2>
             </div>
           </div>
 
-          <div class="content-btn">
-            <button class="btn" id="loginBtn" type="submit">Entrar</button>
+          <div class="product">
+            <div class="icon-p">
+              <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="content-txt-p">
+              <h2>Registro de gastos</h2>
+            </div>
           </div>
-          <p>No tienes cuenta?, <a href="page/register.html">registrate</a></p>
+
+          <div class="product">
+            <div class="icon-p">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="content-txt-p">
+              <h2>Planear presupuestos</h2>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="icon-p">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="content-txt-p">
+              <h2>Estadísticas mensuales</h2>
+            </div>
+          </div>
         </div>
-      </form>
-    </div>
-    <script type="module" src="js/login/login.js"></script>
-    <script type="module" src="js/hash/hash.js"></script>
-    <script type="module" src="js/dashboard/dashboard.js"></script>
+      </section>
+
+      <div class="bor"></div>
+
+      <!-- testimonios -->
+      <section class="testimonials">
+        <div class="section-tilte">
+          <h2>Testimonios de nuestros usuarios</h2>
+        </div>
+        <div class="container-ts">
+          <div class="testimonio uno">
+            <div class="img-user">
+              <img
+                src="https://images.ctfassets.net/lh3zuq09vnm2/yBDals8aU8RWtb0xLnPkI/19b391bda8f43e16e64d40b55561e5cd/How_tracking_user_behavior_on_your_website_can_improve_customer_experience.png"
+                alt="usuario"
+              />
+            </div>
+            <div class="content-tes">
+              <p>
+                La aplicación es realmente maravillosa. No tenía control sobre
+                lo que gastaba durante el mes, y mucho menos durante la semana,
+                pero gracias a ella, sé a dónde va mi dinero.
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonio dos">
+            <div class="img-user">
+              <img
+                src="https://img.freepik.com/free-photo/young-male-posing-isolated-against-blank-studio-wall_273609-12356.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="usuario"
+              />
+            </div>
+            <div class="content-tes">
+              <p>
+                Antes, organizar mis finanzas era una odisea. Gracias a REBO, es
+                tres veces más fácil organizar mis finanzas durante todo el mes.
+                GRACIAS.
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonio tres">
+            <div class="img-user">
+              <img
+                src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                alt="usuario"
+              />
+            </div>
+            <div class="content-tes">
+              <p>Finalmente logré llegar a fin de mes, gracias.</p>
+            </div>
+          </div>
+
+          <div class="testimonio cuatro">
+            <div class="img-user">
+              <img
+                src="https://t3.ftcdn.net/jpg/03/02/88/46/360_F_302884605_actpipOdPOQHDTnFtp4zg4RtlWzhOASp.jpg"
+                alt="usuario"
+              />
+            </div>
+            <div class="content-tes">
+              <p>
+                Con una interfaz amigable y bastante clara, es posiblemente la
+                mejor aplicación para gestionar finanzas personales.
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonio cinco">
+            <div class="img-user">
+              <img
+                src="https://media.istockphoto.com/id/1919265357/photo/close-up-portrait-of-confident-businessman-standing-in-office.jpg?s=612x612&w=0&k=20&c=ZXRPTG9VMfYM3XDo1UL9DEpfO8iuGVSsyh8dptfKQsQ="
+                alt="usuario"
+              />
+            </div>
+            <div class="content-tes">
+              <p>Son muy buenos, deberían ser una cuenta bancaria...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 RBO. Todos los derechos reservados.</p>
+      <div class="redes">
+        <ul>
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://instagram.com/bafaf03" target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/Bafaf23" target="_blank">Github</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

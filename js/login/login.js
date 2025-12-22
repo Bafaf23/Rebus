@@ -16,20 +16,23 @@ if (loginbtn) {
     const emial = emilInput.value.trim();
     const pass = passInput.value;
 
+    //comparando la calve del usurio con la encritada almacenada en la base de datos
     const passawordSegura = await hashPassaword(pass);
 
+    //comporvando los campos vacios
     if (emial === `` || pass === ``) {
       return mesassege(`Los campos no pueden estar vacios`, `Campos vacios`);
     }
-
+    //buscando al usurio por el emal
     const user = userData.find((u) => u.email === emial);
 
+    //comoprovaciones
     if (!user) return mesassege(`El usuario no esta registrado`, `Registrate`);
 
     if (user && user.passwod === passawordSegura) {
       localStorage.setItem("userSession", JSON.stringify(user));
       setTimeout(() => {
-        window.location.href = `page/dashboard.html`;
+        window.location.href = `../dashboard.html`;
       }, 2000);
     } else {
       mesassege(`Usuario o contrasena errada`, `Error de acceso`);

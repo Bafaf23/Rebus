@@ -1,5 +1,19 @@
-@mixin display ($display, $justify, $item){
+@mixin display($display, $justify, $item) {
   display: $display;
   justify-content: $justify;
   align-items: $item;
+}
+
+@mixin flex($gap, $direction, $justify, $align) {
+  display: flex;
+  gap: $gap;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($columns, $rows) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
 }

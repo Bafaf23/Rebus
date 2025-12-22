@@ -1,8 +1,14 @@
+/**
+ *funcion que valida las entradas de informacion del usuario
+ * @param {*} value
+ * @param {*} regex
+ * @returns
+ */
 export function validacionInput(value, regex) {
   return regex.test(value);
 }
 
-//Patter
+//Pattern
 export const userPattern =
   /^[a-zA-ZáéíóúñÁÉÍÓÚÑ][a-zA-ZáéíóúñÁÉÍÓÚÑ0-9_]{5,29}$/;
 export const userLastPattern =

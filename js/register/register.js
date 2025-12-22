@@ -1,11 +1,5 @@
 import { hashPassaword } from "../hash/hash.js";
-import {
-  validacionInput,
-  userPattern,
-  userLastPattern,
-  emailPattern,
-  passPattern,
-} from "../regex/regex.js";
+import { validacionInput, emailPattern, passPattern } from "../regex/regex.js";
 
 /* accediendo a los elementos el DOM */
 const contentAlert = document.getElementById("alert");
