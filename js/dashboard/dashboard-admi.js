@@ -169,17 +169,36 @@ function eliminarUsuario(id, fila) {
   }, 300);
 }
 
+function actualizarAdmin(id, fila) {
+  const index = dataUsers.findIndex((u) => String(u.id) === String(id));
+
+  if (index !== -1) {
+    dataUsers[index].admi = !dataUsers[index].admi;
+
+    // 3. PERSISTENCIA: Guardamos el cambio en LocalStorage inmediatamente
+    localStorage.setItem("dataUsers", JSON.stringify(dataUsers));
+  }
+
+  const labelRango = fila.querySelector(".rango"); // Asegúrate de tener esta clase en tu HTML
+  if (labelRango) {
+    labelRango.textContent = dataUsers[index].admi
+      ? "Administrador"
+      : "Cliente";
+  }
+}
 //Insertar datos en la tabla desktop
 dataUsers.forEach((dataUser) => {
   const tablaUser = document.getElementById("users-table-body");
   const trTabla = document.createElement("tr");
 
-  function isAdmin() {
+  /* function isAdmin() {
     let user = dataUser.admi;
 
     if (user === false) return `Cliente`;
     if (user === true) return `Administrador`;
-  }
+  } */
+
+  const textoRangoInicial = dataUser.admi ? "Administrador" : "Cliente";
 
   function ultimosSeisId() {
     let id = String(dataUser.id);
@@ -192,8 +211,9 @@ dataUsers.forEach((dataUser) => {
     dataUser.lastName
   }" readonly/></td><td><input class="input-email" value="${
     dataUser.email
-  } "readonly/></td><td>${isAdmin()}</td>
+  } "readonly/></td><td class="rango">${textoRangoInicial}</td>
   <td class="content-btn">
+  <span class="btn-isAdmin"><i class="fa-solid fa-key"></i></span>
   <span class="btn-elimina"><i class="fa-regular fa-trash-can "></i></span>
   <span class="btn-actualizar" onclick="preEdit(this)"><i class="fa-regular fa-pen-to-square"></i></span>
    <span class="btn-guardar" style="display:none;"><i class="fa-solid fa-check"></i></span>
@@ -210,6 +230,11 @@ dataUsers.forEach((dataUser) => {
     // Pasamos el ID real y la fila completa (trTabla)
     eliminarUsuario(dataUser.id, trTabla);
   });
+
+  const btnIsAdmin = trTabla.querySelector(".btn-isAdmin");
+  btnIsAdmin.addEventListener(`click`, () => {
+    actualizarAdmin(dataUser.id, trTabla);
+  });
 });
 
 //Insertar datos en la tabla movil
@@ -218,13 +243,7 @@ dataUsers.forEach((dataUser) => {
   const row = document.createElement("div");
   row.classList.add("row");
 
-  function isAdmin() {
-    let user = dataUser.admi;
-
-    if (user === false) return `Cliente`;
-    if (user === true) return `Administrador`;
-  }
-
+  const textAdmin = dataUser.admi ? `Administrador` : "Cliente";
   function ultimosSeisId() {
     let id = String(dataUser.id);
     return id.slice(-6);
@@ -251,11 +270,12 @@ dataUsers.forEach((dataUser) => {
               </div>
               <div class="colum">
                 <div class="header" id="rangoMovil">Rango:</div>
-                <div class="contenido">${isAdmin()}</div>
+                <div class="contenido">${textAdmin}</div>
               </div>
               <div class="colum">
                 <div class="header">Accion:</div>
                 <div class="contenido content-btn">
+                 <span class="btn-isAdmin"><i class="fa-solid fa-key"></i></span>
                   <span class="btn-elimina"><i class="fa-regular fa-trash-can "></i></span>
                   <span class="btn-actualizar" onclick="preEdit(this)"><i class="fa-regular fa-pen-to-square"></i></span>
                   <!-- Botón de guardar -->
@@ -274,6 +294,11 @@ dataUsers.forEach((dataUser) => {
   btnEliminar.addEventListener("click", () => {
     // Pasamos el ID real y la fila completa (trTabla)
     eliminarUsuario(dataUser.id, row);
+  });
+
+  const btnIsAdmin = row.querySelector(".btn-isAdmin");
+  btnIsAdmin.addEventListener(`click`, () => {
+    actualizarAdmin(dataUser.id, row);
   });
 });
 

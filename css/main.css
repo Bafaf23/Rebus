@@ -784,6 +784,16 @@ a {
 .main-content .table-glass .content-btn .btn-guardar:hover {
   background-color: #d6a506;
 }
+.main-content .table-glass .content-btn .btn-isAdmin {
+  padding: 0.7rem;
+  background-color: #7700ff;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+.main-content .table-glass .content-btn .btn-isAdmin:hover {
+  background-color: #0906d6;
+}
 
 /* tabla movil */
 .tabla-movil {

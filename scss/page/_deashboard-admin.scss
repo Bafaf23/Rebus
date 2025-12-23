@@ -197,6 +197,18 @@ $accent: #00d2ff;
           background-color: #d6a506;
         }
       }
+
+      .btn-isAdmin {
+        padding: 0.7rem;
+        background-color: #7700ff;
+        border-radius: 0.5rem;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0906d6;
+        }
+      }
     }
   }
 }
