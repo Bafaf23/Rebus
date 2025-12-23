@@ -1,5 +1,6 @@
 import { hashPassaword } from "../hash/hash.js";
 import { validacionInput, emailPattern, passPattern } from "../regex/regex.js";
+import { alertaZen } from "../SweetAlert/alert.js";
 
 /* accediendo a los elementos el DOM */
 const contentAlert = document.getElementById("alert");
@@ -49,23 +50,32 @@ if (register) {
       rawEmail === "" ||
       rawName === ""
     ) {
-      return mesassege(`los campos no pueden estar vacios`, `Campos vacios`);
+      return alertaZen(`Opss!`, `Los campos no pueden estar vacios`, `error`);
     }
 
     if (!validacionInput(rawEmail, emailPattern)) {
-      return mesassege(`Formato del correo incorrecto`, `Formato`);
+      return alertaZen(
+        `Opss!`,
+        `El formato de la emial no es valido`,
+        `warning`
+      );
     }
     if (!validacionInput(rawPassword, passPattern)) {
-      return mesassege(`Contraseña no cumple los requisitos ❌`, `Seguridad`);
+      return alertaZen(
+        `Opsss!`,
+        `La comtraseña no comple con los requisitos`,
+        "warning"
+      );
     }
 
     const exiteEmial = registerData.some(
       (usuario) => usuario.email === rawEmail
     );
     if (exiteEmial)
-      return mesassege(
-        `El correo electronico ya esta registrado`,
-        `Campos duplicados`
+      return alertaZen(
+        "Este correo ya está registrado.",
+        "¿Tal vez querías iniciar sesión?",
+        "warning"
       );
 
     let passawordSegura = await hashPassaword(rawPassword);
@@ -89,7 +99,11 @@ if (register) {
     email.value = "";
     passwod.value = "";
 
-    mesassege(`Ya puedes usar el servicio`, `Registro Exitoso`);
+    alertaZen(
+      "¡Bienvenido!",
+      "Tu cuenta en REBO ha sido creada con éxito.",
+      "success"
+    );
   });
 }
 
@@ -110,3 +124,17 @@ window.addEventListener(`load`, () => {
   pantalla.style.backgroundSize = "cover";
   pantalla.style.backgroundAttachment = "fixed";
 });
+
+const btnMostarPass = document.getElementById("mostarPass");
+if (btnMostarPass) {
+  btnMostarPass.addEventListener(`click`, () => {
+    const passInput = document.getElementById("passwordRegister");
+    let typeInput = passInput.type;
+
+    if (typeInput === `password`) {
+      passInput.type = `text`;
+    } else {
+      passInput.type = `password`;
+    }
+  });
+}

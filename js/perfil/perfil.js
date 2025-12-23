@@ -1,5 +1,6 @@
 import { mesassege } from "../register/register.js";
 import { validacionInput, emailPattern } from "../regex/regex.js";
+import { alertaZen } from "../SweetAlert/alert.js";
 
 let user = JSON.parse(localStorage.getItem("userSession"));
 
@@ -28,9 +29,11 @@ converAdmin.addEventListener(`click`, () => {
   localStorage.setItem("userSession", JSON.stringify(user));
   localStorage.setItem("dataUsers", JSON.stringify(dataUsers));
 
-  if (user.admi === true) mesassege(`Ya eres Administrador`, `Administrador`);
+  if (user.admi === true)
+    alertaZen(`Que?`, `Ahora eres administrador`, `warning`);
 
-  if (user.admi === false) mesassege(`Ya no eres Administrador`, `Cliente`);
+  if (user.admi === false)
+    alertaZen(`Ahora eres cliente`, `Ya no eres Administrador`, `warning`);
   setTimeout(() => {
     window.location.reload();
   }, 2000);

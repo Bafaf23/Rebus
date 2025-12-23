@@ -1,6 +1,7 @@
 import { mesassege } from "../register/register.js";
 import { hashPassaword } from "../hash/hash.js";
 import { validacionInput, emailPattern } from "../regex/regex.js";
+import { alertaZen } from "../SweetAlert/alert.js";
 
 let userData = JSON.parse(localStorage.getItem("dataUsers")) || [];
 
@@ -21,18 +22,27 @@ if (loginbtn) {
 
     //comporvando los campos vacios
     if (emial === `` || pass === ``) {
-      return mesassege(`Los campos no pueden estar vacios`, `Campos vacios`);
+      return alertaZen(
+        `Compla los campos para cuntinuar`,
+        `Los campos no pueden estar vacios`,
+        `warning`
+      );
     }
 
     //buscando al usurio por el emal
     const user = userData.find((u) => u.email === emial);
 
     if (!validacionInput(emial, emailPattern)) {
-      mesassege(`Formato de correo invalido`, `Correo`);
+      alertaZen(`Formato de correo invalido`, `Correo`, `warning`);
     }
 
     //comoprovaciones
-    if (!user) return mesassege(`El usuario no esta registrado`, `Registrate`);
+    if (!user)
+      return alertaZen(
+        `El usuario no esta registrado`,
+        `Registrate`,
+        `warning`
+      );
 
     if (user && user.passwod === passawordSegura) {
       localStorage.setItem("userSession", JSON.stringify(user));
@@ -40,7 +50,7 @@ if (loginbtn) {
         window.location.href = `../dashboard.html`;
       }, 2000);
     } else {
-      mesassege(`Usuario o contrasena errada`, `Error de acceso`);
+      alertaZen(`Usuario o contrasena errada`, `Inténtalo de nuevo.`, `error`);
     }
   });
 }

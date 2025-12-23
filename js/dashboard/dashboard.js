@@ -124,28 +124,30 @@ if (btnPanel) {
 
 /* modal */
 const modal = document.getElementById("miModal");
-const btnOpenModal = document.getElementById("openModalIngreso");
-const btnOpenModalMovil = document.getElementById("openModalIngresoMovil");
-const btnCloseModal = document.querySelector(".close-btn");
+if (modal) {
+  const btnOpenModal = document.getElementById("openModalIngreso");
+  const btnOpenModalMovil = document.getElementById("openModalIngresoMovil");
+  const btnCloseModal = document.querySelector(".close-btn");
 
-//btn abril modal movil
-btnOpenModalMovil.addEventListener(`click`, () => {
-  modal.style.display = `flex`;
-});
+  //btn abril modal movil
+  btnOpenModalMovil.addEventListener(`click`, () => {
+    modal.style.display = `flex`;
+  });
 
-//btn abril modal desktop
-btnOpenModal.addEventListener(`click`, () => {
-  modal.style.display = `flex`;
-});
+  //btn abril modal desktop
+  btnOpenModal.addEventListener(`click`, () => {
+    modal.style.display = `flex`;
+  });
 
-//btn Cerrar modal
-btnCloseModal.addEventListener(`click`, () => {
-  modal.style.display = `none`;
-});
-
-//cierra la modal a escuchar un click fuera de la caja
-window.onclick = function (event) {
-  if (event.target == modal) {
+  //btn Cerrar modal
+  btnCloseModal.addEventListener(`click`, () => {
     modal.style.display = `none`;
-  }
-};
+  });
+
+  //cierra la modal a escuchar un click fuera de la caja
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = `none`;
+    }
+  };
+}

@@ -2,6 +2,7 @@ import { getData } from "../api/dolarApi.js";
 import { mesassege } from "../register/register.js";
 import { validacionInput, passPattern, emailPattern } from "../regex/regex.js";
 import { hashPassaword } from "../hash/hash.js";
+import { alertaZen } from "../SweetAlert/alert.js";
 
 window.dataUsers = JSON.parse(localStorage.getItem("dataUsers")) || [];
 let user = JSON.parse(localStorage.getItem("userSession"));
@@ -127,6 +128,10 @@ function actualizar(id, fila) {
 
     // 3. Persistencia: Guardar en LocalStorage
     localStorage.setItem("dataUsers", JSON.stringify(dataUsers));
+    alertaZen(
+      `Los datos del usuario han sido actualizados`,
+      `y guardados en el sistema.`
+    );
 
     // 4. Resetear la interfaz
     const inputs = fila.querySelectorAll("input");
@@ -155,6 +160,7 @@ function eliminarUsuario(id, fila) {
 
   // 2. Guardar en LocalStorage
   localStorage.setItem("dataUsers", JSON.stringify(window.dataUsers));
+  alertaZen(`El usuario ha sido removido de la base de datos correctamente.`);
 
   // 3. ANIMACIÓN Y BORRADO VISUAL
   fila.style.opacity = "0";
@@ -185,6 +191,13 @@ function actualizarAdmin(id, fila) {
       ? "Administrador"
       : "Cliente";
   }
+
+  let rangoTxt = dataUsers[index].admi ? `Administrador` : `Cliente`;
+
+  alertaZen(
+    `El rango del usuario ha sido actualizado.`,
+    `Ahora es ${rangoTxt}`
+  );
 }
 //Insertar datos en la tabla desktop
 dataUsers.forEach((dataUser) => {
@@ -330,7 +343,7 @@ document
   .addEventListener(`submit`, async (e) => {
     e.preventDefault();
 
-    const data = JSON.parse(localStorage.getItem("dataUsers"));
+    const data = JSON.parse(localStorage.getItem("dataUsers")) || [];
 
     const name = document.getElementById("nombre").value.trim();
     const lastName = document.getElementById("apellido").value.trim();
@@ -339,24 +352,23 @@ document
     const confirmPass = document.getElementById("confirmPass").value.trim();
 
     if (pass !== confirmPass) {
-      alert("❌ Las contraseñas no coinciden.");
+      alertaZen("Las contraseñas no coinciden.", ``, `warning`);
       return;
     }
-
-    console.log(pass, confirmPass);
 
     const exiteEmial = dataUsers.some((usuario) => usuario.email === email);
 
     if (exiteEmial)
-      return mesassege(
+      return alertaZen(
         `El correo ingresado ya excite en la base de datos`,
-        `Correo`
+        ``,
+        `warning`
       );
 
     let passSegura = await hashPassaword(pass);
 
     if (!validacionInput(pass, passPattern))
-      return mesassege(`las clave no cumple con los requisitos`, `error`);
+      return alertaZen(`las clave no cumple con los requisitos`, ``, `warning`);
 
     let newUser = {
       id: Date.now(),
@@ -369,6 +381,7 @@ document
 
     data.push(newUser);
     localStorage.setItem("dataUsers", JSON.stringify(data));
+    alertaZen(`El usuario creado con exsito`);
 
     document.getElementById("registroForm").reset();
   });
