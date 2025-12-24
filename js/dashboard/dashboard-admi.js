@@ -352,7 +352,7 @@ document
     const confirmPass = document.getElementById("confirmPass").value.trim();
 
     if (pass !== confirmPass) {
-      alertaZen("Las contraseñas no coinciden.", ``, `warning`);
+      alertaZen("La contraseñas no coinciden.", ``, `warning`);
       return;
     }
 
