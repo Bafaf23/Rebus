@@ -1,7 +1,7 @@
-@use"./../utils/mixin" as mix;
+@use "./../utils/mixin" as mix;
 
-.productos{
-  @include mix.display(flex, stard, stard);
+.productos {
+  @include mix.display(flex, stretch, stretch);
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;

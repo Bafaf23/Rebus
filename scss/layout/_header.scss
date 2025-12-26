@@ -20,7 +20,7 @@ header {
   }
 
   .content-btn {
-    @include mix.display(flex, end, stard);
+    @include mix.display(flex, end, stretch);
 
     button {
       padding: 0.2rem;

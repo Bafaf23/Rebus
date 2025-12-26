@@ -9,7 +9,7 @@
   border: 1px solid rgb(235, 232, 232);
 
   .info-card {
-    @include mix.display(flex, center, stard);
+    @include mix.display(flex, center, stretch);
     flex-direction: column;
     gap: 0.3rem;
 
@@ -20,7 +20,7 @@
   }
 
   .content-saldo {
-    @include mix.display(flex, stard, stard);
+    @include mix.display(flex, stretch, stretch);
     flex-direction: column;
     gap: 0.2rem;
     color: rgb(59, 58, 58);

@@ -27,7 +27,7 @@ a {
 .card .info-card {
   display: flex;
   justify-content: center;
-  align-items: stard;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.3rem;
 }
@@ -37,8 +37,8 @@ a {
 }
 .card .content-saldo {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.2rem;
   color: rgb(59, 58, 58);
@@ -60,7 +60,7 @@ a {
 .nav-movil .content-menu {
   display: flex;
   justify-content: space-between;
-  align-items: stard;
+  align-items: stretch;
   padding: 0.3rem;
   font-size: 1.1rem;
 }
@@ -97,8 +97,8 @@ a {
 }
 .card-historial .historial-info {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.3rem;
 }
@@ -107,8 +107,8 @@ a {
 }
 .card-historial .historial-monto {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   gap: 0.3rem;
 }
 .card-historial .historial-monto #monto {
@@ -184,7 +184,7 @@ a {
   .content-desktop .nav-desktop {
     display: flex;
     justify-content: space-around;
-    align-items: stard;
+    align-items: stretch;
     flex-direction: column;
     background-color: white;
     border-radius: 0 20px 20px 0;
@@ -196,13 +196,13 @@ a {
   .content-desktop .nav-desktop .content-perfil-ul {
     display: flex;
     justify-content: center;
-    align-items: stard;
+    align-items: stretch;
     flex-direction: column;
     gap: 2rem;
   }
   .content-desktop .nav-desktop .content-perfil-ul .content-titel-des {
     display: flex;
-    justify-content: stard;
+    justify-content: stretch;
     align-items: center;
     gap: 0.5rem;
   }
@@ -216,7 +216,7 @@ a {
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: stard;
+    align-items: stretch;
     gap: 1rem;
     flex-direction: column;
   }
@@ -424,13 +424,13 @@ a {
   align-items: center;
   flex-direction: column;
   gap: 0.5rem;
-  height: 100%;
+  min-height: 100vh;
   background-position: center;
 }
 .content-form .from {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.1rem;
   background-color: white;
@@ -444,7 +444,7 @@ a {
 .content-form .from .content-titel {
   display: flex;
   justify-content: center;
-  align-items: stard;
+  align-items: stretch;
   color: #050255;
   font-size: 1.5rem;
 }
@@ -462,7 +462,7 @@ a {
 .content-form .from .wrapper-form .content-label_input {
   display: flex;
   justify-content: space-everly;
-  align-items: stard;
+  align-items: stretch;
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
@@ -524,7 +524,7 @@ a {
 @media only screen and (min-width: 768px) {
   .content-form {
     display: flex;
-    justify-content: stard;
+    justify-content: stretch;
     align-items: end;
   }
   .content-form .from {
@@ -561,7 +561,7 @@ a {
 .perfil .card-perfil .acount {
   display: flex;
   justify-content: center;
-  align-items: stard;
+  align-items: stretch;
   color: rgb(182, 180, 180);
 }
 .perfil .card-perfil .content-btn button {
@@ -613,8 +613,8 @@ a {
 }
 .perfil-info .card-perfil {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.3rem;
   background-color: white;
@@ -624,8 +624,8 @@ a {
 }
 .perfil-info .card-perfil .content-info-perfil {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   font-size: 1.2rem;
   gap: 1rem;
@@ -649,7 +649,7 @@ a {
 .perfil-info .card-perfil .content-btn-perfil {
   display: flex;
   justify-content: end;
-  align-items: stard;
+  align-items: stretch;
   padding: 0.2rem;
 }
 .perfil-info .card-perfil .content-btn-perfil .btn {
@@ -1029,7 +1029,7 @@ header .content-img h1 .styleO {
 header .content-btn {
   display: flex;
   justify-content: end;
-  align-items: stard;
+  align-items: stretch;
 }
 header .content-btn button {
   padding: 0.2rem;
@@ -1067,21 +1067,17 @@ header .content-btn button:hover {
 
 .wrapper {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 .wrapper .wrapperdos {
   display: flex;
   justify-content: space-between;
-  align-items: stard;
+  align-items: stretch;
   flex-direction: column;
-  height: 100%;
-}
-.wrapper .wrapperdos .content-main {
-  height: 100%;
 }
 .wrapper .wrapperdos main {
   display: flex;
@@ -1103,8 +1099,8 @@ header .content-btn button:hover {
 }
 .productos {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -1143,8 +1139,8 @@ header .content-btn button:hover {
 }
 .section-welcome .dolar {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   gap: 0.5rem;
   flex-direction: column;
   background-color: white;
@@ -1155,7 +1151,7 @@ header .content-btn button:hover {
 .section-welcome .dolar .info-dolar {
   display: flex;
   justify-content: end;
-  align-items: stard;
+  align-items: stretch;
   gap: 0.3rem;
 }
 .section-welcome .bar-wolcome {
@@ -1166,8 +1162,8 @@ header .content-btn button:hover {
 
 .resuemenes {
   display: flex;
-  justify-content: stard;
-  align-items: stard;
+  justify-content: stretch;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -1186,7 +1182,7 @@ header .content-btn button:hover {
 footer {
   display: flex;
   justify-content: center;
-  align-items: stard;
+  align-items: stretch;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;

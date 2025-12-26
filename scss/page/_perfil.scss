@@ -13,7 +13,7 @@
     border: 1px solid rgb(224, 222, 222);
 
     .acount {
-      @include mix.display(flex, center, stard);
+      @include mix.display(flex, center, stretch);
       color: rgb(182, 180, 180);
     }
 
@@ -71,7 +71,7 @@
   }
 
   .card-perfil {
-    @include mix.display(flex, stard, stard);
+    @include mix.display(flex, stretch, stretch);
     flex-direction: column;
     gap: 0.3rem;
     background-color: white;
@@ -80,7 +80,7 @@
     border: 1px solid rgb(224, 222, 222);
 
     .content-info-perfil {
-      @include mix.display(flex, stard, stard);
+      @include mix.display(flex, stretch, stretch);
       flex-direction: column;
       font-size: 1.2rem;
       gap: 1rem;
@@ -103,7 +103,7 @@
     }
 
     .content-btn-perfil {
-      @include mix.display(flex, end, stard);
+      @include mix.display(flex, end, stretch);
       padding: 0.2rem;
 
       .btn {

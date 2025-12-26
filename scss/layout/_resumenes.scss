@@ -1,23 +1,21 @@
 @use "./../utils/variables-color" as u;
-@use"../utils/mixin" as mix;
+@use "../utils/mixin" as mix;
 
-.resuemenes{
-@include mix.display(flex, stard, stard);
+.resuemenes {
+  @include mix.display(flex, stretch, stretch);
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;
 
-  .titel-resumen{
-    color:u.$primary-color;
+  .titel-resumen {
+    color: u.$primary-color;
     font-weight: bolder;
     font-size: 25px;
-  
   }
-  
-  .content-resumenes{
+
+  .content-resumenes {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
 }
-

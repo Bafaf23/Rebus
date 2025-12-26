@@ -1,8 +1,8 @@
-@use"../utils/variables-color" as u;
-@use"../utils/mixin" as mix;
+@use "../utils/variables-color" as u;
+@use "../utils/mixin" as mix;
 
-footer{
-@include mix.display(flex, center, stard);
+footer {
+  @include mix.display(flex, center, stretch);
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -10,15 +10,13 @@ footer{
   color: white;
   text-align: center;
 
-  .info{
-    span{
+  .info {
+    span {
       color: u.$primari-asento;
     }
   }
 
-  .version{
+  .version {
     color: rgba(199, 196, 196, 0.596);
   }
-  
 }
-

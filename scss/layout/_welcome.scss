@@ -31,7 +31,7 @@
   }
 
   .dolar {
-    @include mix.display(flex, stard, stard);
+    @include mix.display(flex, stretch, stretch);
     gap: 0.5rem;
     flex-direction: column;
     background-color: white;
@@ -40,7 +40,7 @@
     border-radius: 0.5rem;
 
     .info-dolar {
-      @include mix.display(flex, end, stard);
+      @include mix.display(flex, end, stretch);
       gap: 0.3rem;
     }
   }

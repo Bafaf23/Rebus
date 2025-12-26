@@ -8,7 +8,7 @@
   border-radius: 0.2rem;
 
   .historial-info {
-    @include mix.display(flex, stard, stard);
+    @include mix.display(flex, stretch, stretch);
     flex-direction: column;
     gap: 0.3rem;
 
@@ -18,7 +18,7 @@
   }
 
   .historial-monto {
-    @include mix.display(flex, stard, stard);
+    @include mix.display(flex, stretch, stretch);
     gap: 0.3rem;
 
     #monto {

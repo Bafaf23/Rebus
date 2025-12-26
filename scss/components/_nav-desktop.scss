@@ -11,7 +11,7 @@
     width: 17%;
 
     .nav-desktop {
-      @include mix.display(flex, space-around, stard);
+      @include mix.display(flex, space-around, stretch);
       flex-direction: column;
       background-color: white;
       border-radius: 0 20px 20px 0;
@@ -21,12 +21,12 @@
       padding: 0.3rem;
 
       .content-perfil-ul {
-        @include mix.display(flex, center, stard);
+        @include mix.display(flex, center, stretch);
         flex-direction: column;
         gap: 2rem;
 
         .content-titel-des {
-          @include mix.display(flex, stard, center);
+          @include mix.display(flex, stretch, center);
           gap: 0.5rem;
           a {
             text-decoration: none;
@@ -38,7 +38,7 @@
         .content-menu {
           overflow: hidden;
           padding: 0.5rem;
-          @include mix.display(flex, space-between, stard);
+          @include mix.display(flex, space-between, stretch);
           gap: 1rem;
           flex-direction: column;
 

@@ -5,11 +5,11 @@
   @include mix.display(flex, center, center);
   flex-direction: column;
   gap: 0.5rem;
-  height: 100%;
+  min-height: 100vh;
   background-position: center;
 
   .from {
-    @include mix.display(flex, stard, stard);
+    @include mix.display(flex, stretch, stretch);
     flex-direction: column;
     gap: 0.1rem;
     background-color: white;
@@ -20,7 +20,7 @@
     border: 1px solid rgb(161, 159, 159);
 
     .content-titel {
-      @include mix.display(flex, center, stard);
+      @include mix.display(flex, center, stretch);
       color: u.$primari-color;
       font-size: 1.5rem;
       .styleO {
@@ -34,7 +34,7 @@
       gap: 2rem;
       height: 100%;
       .content-label_input {
-        @include mix.display(flex, space-everly, stard);
+        @include mix.display(flex, space-everly, stretch);
         height: fit-content;
         width: 100%;
         flex-direction: column;
@@ -102,7 +102,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .content-form {
-    @include mix.display(flex, stard, end);
+    @include mix.display(flex, stretch, end);
 
     .from {
       position: absolute;
