@@ -151,3 +151,29 @@ if (modal) {
     }
   };
 }
+
+//===========================================================================
+/* nav movil intereactiva */
+//===========================================================================
+
+document.addEventListener(`DOMContentLoaded`, () => {
+  const urlActual = window.location.pathname.split(`/`).pop();
+
+  const navMovil = document.querySelector(".nav-movil");
+  const navDesktop = document.querySelector(".nav-desktop");
+
+  const enlacesMovil = navMovil.querySelectorAll(`ul a`);
+  const enlacesDes = navDesktop.querySelectorAll(`ul a`);
+
+  enlacesMovil.forEach((enlace) => {
+    if (enlace.getAttribute(`href`) === urlActual) {
+      enlace.classList.add(`active`);
+    }
+  });
+
+  enlacesDes.forEach((enlace) => {
+    if (enlace.getAttribute(`href`) === urlActual) {
+      enlace.classList.add(`active`);
+    }
+  });
+});

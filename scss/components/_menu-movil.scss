@@ -9,8 +9,15 @@
     @include mix.display(flex, space-between, stretch);
     padding: 0.3rem;
     font-size: 1.1rem;
+    a {
+      &.active {
+        color: white;
+        border-radius: 0.5rem;
+        background-color: rgba(192, 188, 188, 0.199);
+      }
+    }
 
-    li {
+    .link {
       display: flex;
       flex-direction: column;
       justify-content: center;

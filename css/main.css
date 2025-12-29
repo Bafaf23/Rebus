@@ -64,7 +64,12 @@ a {
   padding: 0.3rem;
   font-size: 1.1rem;
 }
-.nav-movil .content-menu li {
+.nav-movil .content-menu a.active {
+  color: white;
+  border-radius: 0.5rem;
+  background-color: rgba(192, 188, 188, 0.199);
+}
+.nav-movil .content-menu .link {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,7 +79,7 @@ a {
   padding: 0.5rem;
   cursor: pointer;
 }
-.nav-movil .content-menu li:hover {
+.nav-movil .content-menu .link:hover {
   color: white;
   background-color: rgba(192, 188, 188, 0.199);
 }
@@ -260,6 +265,9 @@ a {
   .content-desktop .nav-desktop .content-btn button:hover {
     background-color: rgb(252, 248, 192);
     color: rgb(241, 201, 19);
+  }
+  .active {
+    background-color: rgb(238, 236, 236);
   }
 }
 /* Fondo oscuro translúcido */
