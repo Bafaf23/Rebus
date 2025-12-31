@@ -1,9 +1,10 @@
+@use "./../utils/variables-color" as u;
+
 .container-registro {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f7f6; /* Color suave */
 }
 
 .form-zen {
@@ -15,11 +16,9 @@
 }
 
 .form-zen h2 {
-  color: #2c3e50;
   margin-bottom: 10px;
 }
 .form-zen p {
-  color: #7f8c8d;
   font-size: 0.9em;
   margin-bottom: 25px;
 }
@@ -33,13 +32,14 @@
   display: block;
   font-size: 0.85em;
   margin-bottom: 5px;
-  color: #34495e;
+  color: u.$primary-color;
 }
 
 .input-group input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #dcdde1;
+  background-color: u.$color-text;
+  border: 1px solid u.$color-text;
   border-radius: 10px;
   outline: none;
   transition: border 0.3s;

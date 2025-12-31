@@ -1,3 +1,5 @@
+@use "./../utils/variables-color" as u;
+
 $glass-bg: rgb(255, 255, 255);
 $glass: rgba(255, 255, 255, 0.1);
 $glass-border: rgb(228, 228, 228);
@@ -24,13 +26,13 @@ $accent: #00d2ff;
 .admin-container {
   display: flex;
   min-height: 100vh;
-  background: rgb(243, 243, 243); // Capa para legibilidad
+  background: u.$primari-fondo; // Capa para legibilidad
 }
 
 .sidebar-glass {
   display: none;
   width: 16rem;
-  background: rgb(16, 1, 99);
+  background: u.$color-nav-des;
   border-right: 1px solid $glass-border;
   padding: 2rem;
   border-radius: 0 1rem 1rem 0;
@@ -75,6 +77,8 @@ $accent: #00d2ff;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    background-color: u.$color-card;
+    color: u.$primary-color;
   }
   .admin-profile {
     display: flex;
@@ -82,7 +86,7 @@ $accent: #00d2ff;
     gap: 0.2rem;
     padding: 0.3rem;
     border-radius: 0.5rem;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(216, 216, 216);
   }
   .stats-grid {
     display: grid;
@@ -96,6 +100,8 @@ $accent: #00d2ff;
       display: flex;
       align-items: center;
       gap: 20px;
+      background-color: u.$color-card;
+      color: u.$primary-color;
       i {
         font-size: 2.5rem;
         color: $accent;
@@ -107,6 +113,7 @@ $accent: #00d2ff;
     @include glass-effect;
     padding: 1.5rem;
     overflow-x: auto;
+    background-color: u.$color-card;
 
     .header-table {
       display: flex;
@@ -139,10 +146,12 @@ $accent: #00d2ff;
       border: none;
       outline: none;
       color: gray;
+      background-color: transparent;
     }
 
     .id {
       font-weight: bold;
+      color: gray;
     }
     .content-btn {
       display: flex;
@@ -213,6 +222,10 @@ $accent: #00d2ff;
   }
 }
 
+.rango {
+  color: gray;
+}
+
 /* tabla movil */
 .tabla-movil {
   display: flex;
@@ -226,7 +239,7 @@ $accent: #00d2ff;
     flex-direction: column;
     gap: 0.2rem;
     padding: 0.5rem;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(255, 255, 255);
     border-radius: 0.5rem;
   }
 
@@ -237,7 +250,10 @@ $accent: #00d2ff;
     .header {
       width: 20%;
       color: #00d2ff;
-      font-weight: bold;
+    }
+
+    .id {
+      color: gray;
     }
 
     input {
@@ -247,7 +263,9 @@ $accent: #00d2ff;
       border: none;
       border-bottom: 1px solid rgb(1, 1, 138);
       outline: none;
+      background-color: transparent;
       color: gray;
+      font-weight: bold;
     }
   }
 }

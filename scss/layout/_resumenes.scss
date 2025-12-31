@@ -8,7 +8,7 @@
   padding: 0.5rem;
 
   .titel-resumen {
-    color: u.$primary-color;
+    color: u.$color-text-especial;
     font-weight: bolder;
     font-size: 25px;
   }
@@ -18,7 +18,7 @@
     flex-direction: column-reverse;
     gap: 0.5rem;
     padding: 0.5rem;
-    background-color: rgb(247, 247, 247);
+    background-color: u.$primari-text-sub;
     border-radius: 0.5rem;
   }
 }

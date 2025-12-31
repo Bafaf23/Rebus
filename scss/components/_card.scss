@@ -1,21 +1,23 @@
 @use "./../utils/mixin" as mix;
+@use "./../utils/variables-color" as u;
 
 .card {
   @include mix.display(flex, space-between, center);
   gap: 10px;
-  background-color: white;
+  background-color: u.$color-card;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: 1px solid rgb(235, 232, 232);
+  border: 1px solid u.$color-card;
 
   .info-card {
     @include mix.display(flex, center, stretch);
     flex-direction: column;
     gap: 0.3rem;
+    color: u.$primary-color;
 
     .tipoCuenta {
       font-style: italic;
-      color: rgb(131, 129, 129);
+      color: u.$primari-text-sub;
     }
   }
 
@@ -23,7 +25,7 @@
     @include mix.display(flex, stretch, stretch);
     flex-direction: column;
     gap: 0.2rem;
-    color: rgb(59, 58, 58);
+    color: u.$color-black;
 
     .saldo {
       display: flex;

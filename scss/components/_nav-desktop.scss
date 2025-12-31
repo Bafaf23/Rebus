@@ -17,9 +17,9 @@
     .nav-desktop {
       @include mix.display(flex, space-around, stretch);
       flex-direction: column;
-      background-color: white;
+      background-color: u.$color-nav-des;
       border-radius: 0 20px 20px 0;
-      border: 1px solid rgb(216, 213, 213);
+      border: 1px solid u.$color-nav-des;
       width: 100%;
       height: 100%;
       padding: 0.3rem;
@@ -34,7 +34,7 @@
           gap: 0.5rem;
           a {
             text-decoration: none;
-            color: blue;
+            color: u.$primary-color;
             font-size: 1.5rem;
           }
         }
@@ -51,7 +51,7 @@
             border-radius: 5px;
             padding: 0.5rem;
             cursor: pointer;
-            color: u.$primari-color;
+            color: u.$primary-color;
 
             &:hover {
               background-color: rgb(238, 236, 236);

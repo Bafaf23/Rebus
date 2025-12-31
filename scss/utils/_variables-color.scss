@@ -1,14 +1,44 @@
-$primari-color:#050255;
-$primari-asento:#f5bc03;
-$primari-fondo:#f7f7f7;
-$color-nav: #020a3a;
-$primari-text-sub:#353434;
-$primari-hoverb:#07d5f0;
+:root {
+  // 1. Indispensable para que el navegador active el modo oscuro automático
+  color-scheme: light dark;
 
+  // 2. Variables con soporte para ambos modos
+  // Sintaxis: light-dark(color-claro, color-oscuro)
+  --primari-color: #{light-dark(#050255, #d1d8ff)};
+  --primari-fondo: #{light-dark(#fafafa, #303030)};
+  --primari-text-sub: #{light-dark(#353434, #3f3d3d)};
+  --color-nav: #{light-dark(#020a3a, #01051d)};
+  --color-cad: #{light-dark(#ffffff, #e6e3e3)};
+  --color-nav-des: #{light-dark(#ffffff, #d8d7d7)};
+  --color-text-especial: #{light-dark(#030a6d, #ffffff)};
 
-/* colores principales */
-$primary-color:#142157;
-$secondary-color: #15297c;
-$tertiary-color:#0cbccc;
-$quaternary-color:#107acc;
-$quintary-color:#2898ee;
+  // Colores que se mantienen o tienen variaciones leves
+  --primari-asento: #f5bc03;
+  --primari-hoverb: #07d5f0;
+
+  /* Paleta de colores principales (puedes dejarlos fijos o usar light-dark) */
+  --primary-color: #142157;
+  --secondary-color: #15297c;
+  --tertiary-color: #0cbccc;
+  --quaternary-color: #107acc;
+  --quintary-color: #2898ee;
+  --color-black: #000000;
+  --color-text: #ffffff;
+}
+
+$primari-color: var(--primari-color);
+$primari-fondo: var(--primari-fondo);
+$primari-text-sub: var(--primari-text-sub);
+$color-nav: var(--color-nav);
+$color-text: var(--color-text);
+$color-card: var(--color-cad);
+$color-black: var(--color-black);
+$color-nav-des: var(--color-nav-des);
+$color-text-especial: var(--color-text-especial);
+
+$primari-asento: var(--primari-asento);
+$primari-hoverb: var(--primari-hoverb);
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiary-color);

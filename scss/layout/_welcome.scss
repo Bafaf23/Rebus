@@ -34,8 +34,8 @@
     @include mix.display(flex, stretch, stretch);
     gap: 0.5rem;
     flex-direction: column;
-    background-color: white;
-    color: u.$primari-color;
+    background-color: u.$color-text;
+    color: u.$primary-color;
     padding: 0.5rem;
     border-radius: 0.5rem;
 

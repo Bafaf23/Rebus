@@ -1,3 +1,5 @@
+@use "./../utils/variables-color" as u;
+
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +9,7 @@
 
 body {
   height: 100dvb;
+  background-color: u.$primari-fondo;
 }
 
 a {

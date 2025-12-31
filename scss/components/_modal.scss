@@ -1,3 +1,5 @@
+@use "./../utils/variables-color" as u;
+
 /* Fondo oscuro translúcido */
 .modal {
   display: none; /* Oculto por defecto */
@@ -15,7 +17,7 @@
 
 /* Caja de la modal */
 .modal-content {
-  background-color: #fff;
+  background-color: u.$color-nav-des;
   padding: 30px;
   border-radius: 15px;
   width: 400px;

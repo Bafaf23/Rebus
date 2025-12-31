@@ -89,7 +89,7 @@ function preEditTabla(btn) {
 
   inputs.forEach((input) => {
     input.readOnly = false;
-    input.style.backgroundColor = "#fff"; // Opcional: cambio visual para indicar edición
+    input.style.backgroundColor = "trasnparent"; // Opcional: cambio visual para indicar edición
     input.style.borderBottom = "1px solid rgb(9, 20, 177)";
     input.style.color = `black`;
   });
@@ -283,7 +283,7 @@ dataUsers.forEach((dataUser) => {
               </div>
               <div class="colum">
                 <div class="header" id="rangoMovil">Rango:</div>
-                <div class="contenido">${textAdmin}</div>
+                <div class="contenido rango">${textAdmin}</div>
               </div>
               <div class="colum">
                 <div class="header">Accion:</div>

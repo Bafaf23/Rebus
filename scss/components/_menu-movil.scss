@@ -2,7 +2,7 @@
 @use "../utils/mixin" as mix;
 
 .nav-movil {
-  background-color: u.$secondary-color;
+  background-color: u.$color-nav;
   width: 100%;
 
   .content-menu {
@@ -11,7 +11,7 @@
     font-size: 1.1rem;
     a {
       &.active {
-        color: white;
+        color: u.$color-text;
         border-radius: 0.5rem;
         background-color: rgba(192, 188, 188, 0.199);
       }
@@ -22,7 +22,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: rgba(156, 156, 156, 0.719);
+      color: u.$primari-text-sub;
       border-radius: 0.5rem;
       padding: 0.5rem;
       cursor: pointer;
