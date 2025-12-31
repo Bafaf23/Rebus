@@ -20,7 +20,7 @@ header {
   }
 
   .content-btn {
-    @include mix.display(flex, end, stretch);
+    @include mix.display(flex, space-between, stretch);
 
     #logoutBtn {
       padding: 0.2rem;

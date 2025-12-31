@@ -1085,7 +1085,7 @@ header .content-img h1 .styleO {
 }
 header .content-btn {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: stretch;
 }
 header .content-btn #logoutBtn {
@@ -1265,6 +1265,17 @@ footer .version {
 }
 
 .themeSelector {
-  font-size: 1rem;
-  padding: 0.7;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  border: none;
+}
+.themeSelector:hover {
+  background-color: rgb(70, 52, 175);
+}
+
+.dark {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
