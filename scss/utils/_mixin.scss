@@ -17,3 +17,16 @@
   grid-template-columns: repeat($columns, 1fr);
   grid-template-rows: repeat($rows, 1fr);
 }
+
+// _mixins.scss
+@mixin dark-mode {
+  // Detecta si el usuario tiene el modo oscuro en su Sistema Operativo
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+
+  // Detecta si se ha añadido el atributo manualmente (ej. mediante un botón)
+  [data-theme="dark"] & {
+    @content;
+  }
+}

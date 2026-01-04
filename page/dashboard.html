@@ -95,9 +95,12 @@
             </div>
             <!-- Btn  -->
             <div class="content-btn">
-              <button class="themeSelector">
-                <i class="fa-solid fa-sun dark"></i>
-                <i class="fa-solid fa-moon"></i>
+              <button class="themeSelector btn-toggle">
+                <i
+                  id="theme-toggle-light-icon"
+                  class="fa-solid fa-sun dark"
+                ></i>
+                <i id="theme-toggle-dark-icon" class="fa-solid fa-moon"></i>
               </button>
               <button id="logoutBtn">
                 Salir
@@ -295,6 +298,7 @@
         </div>
       </div>
     </div>
+    <script type="module" src="../js/dark/dark.js"></script>
     <script type="module" src="../js/dashboard/ingreso.js"></script>
     <script type="module" src="../js/dashboard/dashboard.js"></script>
     <script type="module" src="../js/dashboard/egreso.js"></script>

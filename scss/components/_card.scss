@@ -9,6 +9,11 @@
   border-radius: 0.2rem;
   border: 1px solid u.$color-card;
 
+  @include mix.dark-mode {
+    background-color: u.$color-card;
+    border: 1px solid u.$color-card;
+  }
+
   .info-card {
     @include mix.display(flex, center, stretch);
     flex-direction: column;

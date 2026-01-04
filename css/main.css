@@ -1,23 +1,33 @@
 @charset "UTF-8";
 :root {
   color-scheme: light dark;
-  --primari-color: light-dark(#050255, #d1d8ff);
+  --primari-color: light-dark(#050255, #0025f8);
   --primari-fondo: light-dark(#fafafa, #303030);
-  --primari-text-sub: light-dark(#353434, #3f3d3d);
+  --primari-text-sub: light-dark(#b9b6b6, #3f3d3d);
+  --bg-trans-in: light-dark(#e6e5e5, #3a3939);
   --color-nav: light-dark(#020a3a, #01051d);
   --color-cad: light-dark(#ffffff, #e6e3e3);
-  --color-nav-des: light-dark(#ffffff, #d8d7d7);
+  --color-nav-des: light-dark(#ffffff, #d7d7d8);
+  --color-nav-admin: light-dark(#051158, #021475);
   --color-text-especial: light-dark(#030a6d, #ffffff);
   --primari-asento: #f5bc03;
   --primari-hoverb: #07d5f0;
   /* Paleta de colores principales (puedes dejarlos fijos o usar light-dark) */
-  --primary-color: #142157;
+  --primary-color: #071341;
   --secondary-color: #15297c;
   --tertiary-color: #0cbccc;
   --quaternary-color: #107acc;
   --quintary-color: #2898ee;
   --color-black: #000000;
   --color-text: #ffffff;
+}
+
+[data-theme=dark] {
+  color-scheme: dark !important;
+}
+
+[data-theme=light] {
+  color-scheme: light !important;
 }
 
 * {
@@ -44,6 +54,16 @@ a {
   background-color: var(--color-cad);
   padding: 0.5rem;
   border-radius: 0.2rem;
+  border: 1px solid var(--color-cad);
+}
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: var(--color-cad);
+    border: 1px solid var(--color-cad);
+  }
+}
+[data-theme=dark] .card {
+  background-color: var(--color-cad);
   border: 1px solid var(--color-cad);
 }
 .card .info-card {
@@ -475,19 +495,20 @@ a {
   align-items: stretch;
   flex-direction: column;
   gap: 0.1rem;
-  background-color: white;
+  background-color: var(--color-text);
   width: 20rem;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 0.2rem;
   padding: 1rem;
-  border: 1px solid rgb(161, 159, 159);
+  border: 1px solid var(--color-text);
+  color: var(--color-black);
 }
 .content-form .from .content-titel {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  color: var(--primari-color);
+  color: var(--primary-color);
   font-size: 1.5rem;
 }
 .content-form .from .content-titel .styleO {
@@ -517,6 +538,7 @@ a {
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
+  color: var(--color-black);
 }
 .content-form .from .wrapper-form .content-label_input .label label {
   font-size: 1.2rem;
@@ -528,7 +550,8 @@ a {
   outline: none;
   border: none;
   border-bottom: 1px solid rgb(3, 22, 107);
-  background-color: rgb(248, 246, 246);
+  background-color: rgb(245, 244, 244);
+  color: var(--color-black);
 }
 .content-form .from .wrapper-form .content-label_input .iconEyer {
   position: absolute;
@@ -550,7 +573,7 @@ a {
   margin-bottom: 0.5rem;
 }
 .content-form .from .wrapper-form .content-btn button {
-  background-color: var(--primari-color);
+  background-color: var(--primary-color);
   border: none;
   color: white;
   width: 50%;
@@ -744,8 +767,8 @@ a {
 .sidebar-glass {
   display: none;
   width: 16rem;
-  background: var(--color-nav-des);
-  border-right: 1px solid rgb(228, 228, 228);
+  background: var(--color-nav-admin);
+  border-right: 1px solid var(--color-nav-admin);
   padding: 2rem;
   border-radius: 0 1rem 1rem 0;
 }
@@ -780,7 +803,7 @@ a {
   padding: 0.5rem;
 }
 .main-content .header-glass {
-  background: rgb(255, 255, 255);
+  background: rgb(16, 26, 158);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(228, 228, 228);
@@ -808,7 +831,7 @@ a {
   margin-bottom: 2rem;
 }
 .main-content .stats-grid .card-glass {
-  background: rgb(255, 255, 255);
+  background: rgb(16, 26, 158);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(228, 228, 228);
@@ -825,7 +848,7 @@ a {
   color: #00d2ff;
 }
 .main-content .table-glass {
-  background: rgb(255, 255, 255);
+  background: rgb(16, 26, 158);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(228, 228, 228);
@@ -1242,7 +1265,7 @@ header .content-btn #logoutBtn:hover {
   flex-direction: column-reverse;
   gap: 0.5rem;
   padding: 0.5rem;
-  background-color: var(--primari-text-sub);
+  background-color: var(--bg-trans-in);
   border-radius: 0.5rem;
 }
 
@@ -1271,11 +1294,8 @@ footer .version {
   background-color: transparent;
   border-radius: 0.4rem;
   border: none;
+  color: white;
 }
 .themeSelector:hover {
   background-color: rgb(70, 52, 175);
-}
-
-.dark {
-  display: none;
 }/*# sourceMappingURL=main.css.map */

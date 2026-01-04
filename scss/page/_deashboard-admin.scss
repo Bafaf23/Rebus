@@ -1,6 +1,6 @@
 @use "./../utils/variables-color" as u;
 
-$glass-bg: rgb(255, 255, 255);
+$glass-bg: rgb(16, 26, 158);
 $glass: rgba(255, 255, 255, 0.1);
 $glass-border: rgb(228, 228, 228);
 $accent: #00d2ff;
@@ -32,8 +32,8 @@ $accent: #00d2ff;
 .sidebar-glass {
   display: none;
   width: 16rem;
-  background: u.$color-nav-des;
-  border-right: 1px solid $glass-border;
+  background: u.$color-nav-admin;
+  border-right: 1px solid u.$color-nav-admin;
   padding: 2rem;
   border-radius: 0 1rem 1rem 0;
 

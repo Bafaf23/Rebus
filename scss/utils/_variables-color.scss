@@ -4,12 +4,14 @@
 
   // 2. Variables con soporte para ambos modos
   // Sintaxis: light-dark(color-claro, color-oscuro)
-  --primari-color: #{light-dark(#050255, #d1d8ff)};
+  --primari-color: #{light-dark(#050255, #0025f8)};
   --primari-fondo: #{light-dark(#fafafa, #303030)};
-  --primari-text-sub: #{light-dark(#353434, #3f3d3d)};
+  --primari-text-sub: #{light-dark(#b9b6b6, #3f3d3d)};
+  --bg-trans-in: #{light-dark(#e6e5e5, #3a3939)};
   --color-nav: #{light-dark(#020a3a, #01051d)};
   --color-cad: #{light-dark(#ffffff, #e6e3e3)};
-  --color-nav-des: #{light-dark(#ffffff, #d8d7d7)};
+  --color-nav-des: #{light-dark(#ffffff, #d7d7d8)};
+  --color-nav-admin: #{light-dark(#051158, #021475)};
   --color-text-especial: #{light-dark(#030a6d, #ffffff)};
 
   // Colores que se mantienen o tienen variaciones leves
@@ -17,7 +19,7 @@
   --primari-hoverb: #07d5f0;
 
   /* Paleta de colores principales (puedes dejarlos fijos o usar light-dark) */
-  --primary-color: #142157;
+  --primary-color: #071341;
   --secondary-color: #15297c;
   --tertiary-color: #0cbccc;
   --quaternary-color: #107acc;
@@ -26,17 +28,28 @@
   --color-text: #ffffff;
 }
 
+[data-theme="dark"] {
+  color-scheme: dark !important;
+}
+
+[data-theme="light"] {
+  color-scheme: light !important;
+}
+
 $primari-color: var(--primari-color);
 $primari-fondo: var(--primari-fondo);
 $primari-text-sub: var(--primari-text-sub);
+$bg-trans-in: var(--bg-trans-in);
 $color-nav: var(--color-nav);
 $color-text: var(--color-text);
 $color-card: var(--color-cad);
 $color-black: var(--color-black);
 $color-nav-des: var(--color-nav-des);
+$color-nav-admin: var(--color-nav-admin);
 $color-text-especial: var(--color-text-especial);
 
 $primari-asento: var(--primari-asento);
+$accent-color: var(----accent-color);
 $primari-hoverb: var(--primari-hoverb);
 
 $primary-color: var(--primary-color);
