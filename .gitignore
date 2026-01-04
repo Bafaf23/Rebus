@@ -1,5 +1,7 @@
-#configuracion 
+#configuracion y carpetas 
 .vscode
+.node_modules
+.python
 
 #js no nesesarios
 js/deuda.js

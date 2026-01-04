@@ -14,7 +14,7 @@ const logoutBtnDes = document.getElementById("logoutBtnDes");
 
 /** funcion control de acceso
  *
- * @function
+ * @function{function} checkAcces
  */
 (function checkAccess() {
   const session = JSON.parse(localStorage.getItem("userSession"));
@@ -76,7 +76,7 @@ if (userDestok) userDestok.textContent = ` ${user.name}`;
  * funcion que crea el avatar con la inicial del nombre del usurio
  *
  * @function @param {*} nameUser
- * @returns inical en mayuscula
+ * @returns {string} inical en mayuscula
  */
 export function getAvatar(nameUser) {
   const parts = nameUser.trim().split(``);
@@ -96,7 +96,7 @@ getData("https://ve.dolarapi.com/v1/dolares/oficial").then((data) => {
 
 /**
  * funcion para renderisar el precio del dolar
- * @param {*} data
+ * @param {object} data
  */
 function renderDolar(data) {
   if (data && data.promedio !== undefined) {
