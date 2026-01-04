@@ -1,7 +1,7 @@
 #configuracion y carpetas 
 .vscode
-.node_modules
-.python
+node_modules
+python
 packege-lock.json
 packege.json
 
